@@ -1,0 +1,52 @@
+<div class="auth-bg">
+  <div class="auth-card">
+    <div class="auth-left">
+      <div class="auth-image">
+        <img src="/img/hero.jpg" alt="Product" />
+        <div class="auth-brand">Curve Comfort</div>
+      </div>
+    </div>
+
+    <div class="auth-right">
+      <h1 class="auth-title">
+        <%= title || "Welcome" %>
+      </h1>
+
+      <% if (subtitle) { %>
+        <p class="auth-subtitle">
+          <%= subtitle %>
+        </p>
+        <% } %>
+
+
+
+
+          <form class="auth-form" action="/verify-email" method="POST">
+            <div class="field">
+              <label>OTP</label>
+              <input name="otp" inputmode="numeric" autocomplete="one-time-code" placeholder="Enter OTP" required />
+            </div>
+
+            <button class="auth-btn" type="submit">Verify Email</button>
+
+            <div class="bottom">
+              Didn’t receive it? You can resend the code below.
+            </div>
+          </form>
+
+          <form action="/verify-email/resend" method="POST" style="margin-top:10px">
+            <button class="auth-btn" type="submit" style="background:#1f1f1f">Resend OTP</button>
+          </form>
+
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function togglePassword(btn) {
+    const input = btn?.parentElement?.querySelector("input");
+    if (!input) return;
+    input.type = input.type === "password" ? "text" : "password";
+  }
+</script>

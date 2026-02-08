@@ -1,0 +1,66 @@
+<div class="account-address-item">
+  <h6 class="mb_20">
+    <%= a.isDefault ? "Default" : (a.label || "Address") %>
+  </h6>
+
+  <p><%= a.fullName %></p>
+  <p><%= a.line1 %></p>
+
+  <% if (a.line2) { %>
+    <p><%= a.line2 %></p>
+  <% } %>
+
+  <% if (a.landmark) { %>
+    <p>Landmark: <%= a.landmark %></p>
+  <% } %>
+
+  <p><%= a.city %>, <%= a.state %> - <%= a.postalCode %></p>
+  <p><%= a.country || "India" %></p>
+
+  <p class="mb_10">
+    <%= a.phone %>
+    <% if (a.alternatePhone) { %>, <%= a.alternatePhone %><% } %>
+  </p>
+
+  <div class="d-flex gap-10 justify-content-center">
+    <button type="button" class="tf-btn radius-4 btn-fill btn-edit-address">
+      <span class="text">Edit</span>
+    </button>
+
+    <form class="delete-address-form" data-id="<%= a._id %>">
+      <button type="submit" class="tf-btn radius-4 btn-outline">
+        <span class="text">Delete</span>
+      </button>
+    </form>
+  </div>
+
+  <!-- EDIT ADDRESS FORM (PRE-FILLED) -->
+  <form class="edit-form-address wd-form-address" method="PATCH"
+        action="/api/user/address/<%= a._id %>" style="display:none;">
+    <div class="title">Edit address</div>
+
+    <fieldset class="mb_20"><input type="text" name="fullName" value="<%= a.fullName %>" required /></fieldset>
+    <fieldset class="mb_20"><input type="text" name="phone" value="<%= a.phone %>" required /></fieldset>
+    <fieldset class="mb_20"><input type="text" name="alternatePhone" value="<%= a.alternatePhone || '' %>" /></fieldset>
+    <fieldset class="mb_20"><input type="text" name="line1" value="<%= a.line1 %>" required /></fieldset>
+    <fieldset class="mb_20"><input type="text" name="line2" value="<%= a.line2 || '' %>" /></fieldset>
+    <fieldset class="mb_20"><input type="text" name="landmark" value="<%= a.landmark || '' %>" /></fieldset>
+    <fieldset class="mb_20"><input type="text" name="city" value="<%= a.city %>" required /></fieldset>
+    <fieldset class="mb_20"><input type="text" name="state" value="<%= a.state %>" required /></fieldset>
+    <fieldset class="mb_20"><input type="text" name="postalCode" value="<%= a.postalCode %>" required /></fieldset>
+    <fieldset class="mb_20"><input type="text" value="India" readonly /></fieldset>
+
+    <div class="tf-cart-checkbox mb_20">
+      <div class="tf-checkbox-wrapp">
+        <input type="checkbox" name="isDefault" value="true" <%= a.isDefault ? "checked" : "" %> />
+        <div><i class="icon-check"></i></div>
+      </div>
+      <label>Set as default address</label>
+    </div>
+
+    <div class="d-flex flex-column gap-20">
+      <button type="submit" class="tf-btn btn-fill radius-4"><span class="text">Update address</span></button>
+      <span class="tf-btn btn-fill radius-4 btn-hide-edit-address"><span class="text">Cancel</span></span>
+    </div>
+  </form>
+</div>

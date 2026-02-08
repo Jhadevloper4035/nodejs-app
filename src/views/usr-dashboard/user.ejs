@@ -1,0 +1,59 @@
+<div class="my-account-content">
+    <div class="account-details">
+        <form action="#" class="form-account-details form-has-password">
+            <div class="account-info">
+                <h5 class="title">Information</h5>
+                <div class="cols mb_20">
+                    <fieldset class="">
+                        <input class="" type="text" placeholder="First Name*" name="text" tabindex="2"
+                            value="<%= user.name %>" aria-required="true" required="">
+                    </fieldset>
+                    <fieldset class="">
+                        <input class="" type="text" placeholder="Last Name*" name="text" tabindex="2" value="NA"
+                            aria-required="true" required="">
+                    </fieldset>
+                </div>
+                <div class="cols mb_20">
+                    <fieldset class="">
+                        <input class="" type="email" placeholder="Username or email address*" name="email" tabindex="2"
+                            value="<%= user.email %>" aria-required="true" required="">
+                    </fieldset>
+                    <fieldset class="">
+                        <input class="" type="text" placeholder="Phone*" name="text" tabindex="2"
+                            value="(+12) 345 678 910" aria-required="true" required="">
+                    </fieldset>
+                </div>
+
+            </div>
+            <div class="account-password">
+                <h5 class="title">Change Password</h5>
+                <fieldset class="position-relative password-item mb_20">
+                    <input class="input-password" type="password" placeholder="Password*" name="password" tabindex="2"
+                        value="" aria-required="true" required="">
+                    <span class="toggle-password unshow">
+                        <i class="icon-eye-hide-line"></i>
+                    </span>
+                </fieldset>
+                <fieldset class="position-relative password-item mb_20">
+                    <input class="input-password" type="password" placeholder="New Password*" name="password"
+                        tabindex="2" value="" aria-required="true" required="">
+                    <span class="toggle-password unshow">
+                        <i class="icon-eye-hide-line"></i>
+                    </span>
+                </fieldset>
+                <fieldset class="position-relative password-item">
+                    <input class="input-password" type="password" placeholder="Confirm Password*" name="password"
+                        tabindex="2" value="" aria-required="true" required="">
+                    <span class="toggle-password unshow">
+                        <i class="icon-eye-hide-line"></i>
+                    </span>
+                </fieldset>
+            </div>
+            <div class="button-submit">
+                <button class="tf-btn btn-fill" type="submit">
+                    <span class="text text-button">Update Account</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

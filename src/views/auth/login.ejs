@@ -1,0 +1,61 @@
+<div class="auth-bg">
+  <div class="auth-card">
+    <div class="auth-left">
+      <div class="auth-image">
+        <img src="/img/hero.jpg" alt="Product" />
+        <div class="auth-brand">Curve Comfort</div>
+      </div>
+    </div>
+
+    <div class="auth-right">
+      <h1 class="auth-title">
+        <%= title || "Welcome" %>
+      </h1>
+
+      <% if (subtitle) { %>
+        <p class="auth-subtitle">
+          <%= subtitle %>
+        </p>
+        <% } %>
+
+
+
+          <form class="auth-form" action="/login" method="POST">
+            <div class="field">
+              <label>Email</label>
+              <input name="email" type="email" placeholder="johndoe@mail.domain"
+                value="<%= (values && values.email) || '' %>" required />
+            </div>
+
+            <div class="field">
+              <label>Password</label>
+              <div class="password">
+                <input name="password" type="password" placeholder="Enter your password" required />
+                <button class="eye" type="button" onclick="togglePassword(this)">👁</button>
+              </div>
+            </div>
+
+            <div class="row">
+              <label class="check">
+                <input type="checkbox" name="remember" /> Remember my account
+              </label>
+              <a class="link" href="/forgot-password">Forgot Password?</a>
+            </div>
+
+            <button class="auth-btn" type="submit">Login</button>
+
+            <div class="bottom">
+              Don’t have an account? <a class="link" href="/register">Register Now</a>
+            </div>
+          </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  function togglePassword(btn) {
+    const input = btn?.parentElement?.querySelector("input");
+    if (!input) return;
+    input.type = input.type === "password" ? "text" : "password";
+  }
+</script>

@@ -1,0 +1,317 @@
+<!-- ADD ADDRESS FORM (HTML5 validation) -->
+<form class="show-form-address wd-form-address" id="addAddressForm" action="#" autocomplete="off" novalidate>
+
+  <div class="title">Add a new address</div>
+
+  <div class="cols mb_20">
+    <fieldset>
+      <input type="text" name="label" placeholder="Label (Home/Work/Other)" maxlength="30" />
+    </fieldset>
+
+    <fieldset>
+      <input type="text" id="fullName" name="fullName" placeholder="Full Name*" required minlength="3" maxlength="80"
+        pattern="[A-Za-z ]+" />
+    </fieldset>
+  </div>
+
+  <!-- Phone + Alternate Phone -->
+  <div class="cols mb_20">
+    <fieldset>
+      <input type="tel" id="phone" name="phone" placeholder="Phone*" required maxlength="10" inputmode="numeric"
+        pattern="[0-9]{10}" />
+    </fieldset>
+
+    <fieldset>
+      <input type="tel" id="alternatePhone" name="alternatePhone" placeholder="Alternate Phone" maxlength="10"
+        inputmode="numeric" pattern="[0-9]{10}" />
+    </fieldset>
+  </div>
+
+  <!-- Address Lines -->
+  <fieldset class="mb_20">
+    <input type="text" name="line1" placeholder="Address Line 1*" required maxlength="120"
+      pattern="[A-Za-z0-9 .,#/()\-]*" />
+  </fieldset>
+
+  <fieldset class="mb_20">
+    <input type="text" name="line2" placeholder="Address Line 2" maxlength="120" pattern="[A-Za-z0-9 .,#/()\-]*" />
+  </fieldset>
+
+  <!-- Landmark + PIN -->
+  <div class="cols mb_20">
+    <fieldset>
+      <input type="text" id="landmark" name="landmark" placeholder="Landmark" maxlength="120" pattern="[A-Za-z ]*" />
+    </fieldset>
+
+    <fieldset>
+      <input type="text" id="postalCode" name="postalCode" placeholder="PIN Code*" required maxlength="6"
+        inputmode="numeric" pattern="[0-9]{6}" />
+    </fieldset>
+  </div>
+
+  <!-- City + State -->
+  <div class="cols mb_20">
+    <fieldset>
+      <input type="text" id="city" name="city" placeholder="City*" required maxlength="60" pattern="[A-Za-z ]+" />
+    </fieldset>
+
+    <div class="tf-select">
+      <select class="text-title" name="state" required>
+        <option value="" selected disabled>Select State*</option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+        <option value="Assam">Assam</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Chhattisgarh">Chhattisgarh</option>
+        <option value="Goa">Goa</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Madhya Pradesh">Madhya Pradesh</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Manipur">Manipur</option>
+        <option value="Meghalaya">Meghalaya</option>
+        <option value="Mizoram">Mizoram</option>
+        <option value="Nagaland">Nagaland</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Sikkim">Sikkim</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Telangana">Telangana</option>
+        <option value="Tripura">Tripura</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="Uttarakhand">Uttarakhand</option>
+        <option value="West Bengal">West Bengal</option>
+
+        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+        <option value="Ladakh">Ladakh</option>
+        <option value="Lakshadweep">Lakshadweep</option>
+        <option value="Puducherry">Puducherry</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Default -->
+  <div class="tf-cart-checkbox mb_20">
+    <div class="tf-checkbox-wrapp">
+      <input type="checkbox" id="add_isDefault" name="isDefault" value="true" />
+      <div><i class="icon-check"></i></div>
+    </div>
+    <label for="add_isDefault">Set as default address.</label>
+  </div>
+
+  <div class="d-flex align-items-center justify-content-center gap-20">
+    <button type="submit" class="tf-btn btn-fill radius-4">
+      <span class="text">Add address</span>
+    </button>
+    <span class="tf-btn btn-fill radius-4 btn-hide-address" role="button" tabindex="0">
+      <span class="text">Cancel</span>
+    </span>
+  </div>
+</form>
+
+
+<!-- ========================================
+     ALL SCRIPTS CONSOLIDATED (Single Block)
+     ======================================== -->
+<script>
+  (function () {
+    "use strict";
+
+    // Wait for DOM to be fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("addAddressForm");
+      if (!form) {
+        return;
+      }
+
+      // ========================================
+      // 1. SHOW/HIDE FORM LOGIC
+      // ========================================
+      
+      // Hide by default
+      form.style.display = "none";
+
+      // Open form (event delegation for dynamically added buttons)
+      document.addEventListener("click", function (e) {
+        const openBtn = e.target.closest(".btn-address");
+        if (!openBtn) return;
+
+        e.preventDefault();
+        form.style.display = "block";
+        form.classList.add("is-open");
+        form.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      // Close form
+      form.addEventListener("click", function (e) {
+        const cancelBtn = e.target.closest(".btn-hide-address");
+        if (!cancelBtn) return;
+
+        e.preventDefault();
+        form.classList.remove("is-open");
+        form.style.display = "none";
+        form.reset();
+      });
+
+      // ========================================
+      // 2. INPUT RESTRICTIONS (UX Enhancement)
+      // ========================================
+      
+      const phone = form.querySelector("#phone");
+      const alternatePhone = form.querySelector("#alternatePhone");
+      const postalCode = form.querySelector("#postalCode");
+
+      function keepOnlyDigits(el, maxLen) {
+        if (!el) return;
+        el.addEventListener("input", function () {
+          const digits = el.value.replace(/\D/g, "").slice(0, maxLen);
+          if (el.value !== digits) {
+            el.value = digits;
+          }
+        });
+      }
+
+      keepOnlyDigits(phone, 10);
+      keepOnlyDigits(alternatePhone, 10);
+      keepOnlyDigits(postalCode, 6);
+
+      // ========================================
+      // 3. VALIDATION LOGIC
+      // ========================================
+      
+      function validateForm() {
+        // HTML5 validation first
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return false;
+        }
+
+        // Custom cross-field validation
+        const p = (phone?.value || "").trim();
+        const alt = (alternatePhone?.value || "").trim();
+        
+        if (alt && alt === p) {
+          alert("Alternate phone must be different from primary phone.");
+          return false;
+        }
+
+        return true;
+      }
+
+      // ========================================
+      // 4. PAYLOAD BUILDER
+      // ========================================
+      
+      function buildPayload() {
+        const fd = new FormData(form);
+        const payload = {
+          label: (fd.get("label") || "").toString().trim(),
+          fullName: fd.get("fullName").toString().trim(),
+          phone: fd.get("phone").toString().trim(),
+          alternatePhone: (fd.get("alternatePhone") || "").toString().trim() || null,
+          line1: fd.get("line1").toString().trim(),
+          line2: (fd.get("line2") || "").toString().trim(),
+          landmark: (fd.get("landmark") || "").toString().trim(),
+          city: fd.get("city").toString().trim(),
+          state: fd.get("state").toString(),
+          country: "India",
+          postalCode: fd.get("postalCode").toString().trim(),
+          isDefault: fd.get("isDefault") === "true",
+        };
+        
+        return payload;
+      }
+
+      // ========================================
+      // 5. API CALL (Fetch)
+      // ========================================
+      
+      async function saveAddress(payload) {
+
+        const res = await fetch("/api/user/address", {
+          method: "POST",
+          headers: { 
+            "Content-Type": "application/json" 
+          },
+          body: JSON.stringify(payload),
+          credentials: "include", // Send cookies (JWT)
+        });
+
+        const data = await res.json().catch(() => ({}));
+        
+        if (!res.ok) {
+          throw new Error(data.message || "Failed to save address.");
+        }
+        return data;
+      }
+
+      // ========================================
+      // 6. FORM SUBMIT HANDLER
+      // ========================================
+      
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        // Validate
+        if (!validateForm()) {
+          return;
+        }
+
+        // Build payload
+        const payload = buildPayload();
+
+        // Disable submit button to prevent double-submit
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn?.querySelector(".text")?.textContent;
+        
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          const textSpan = submitBtn.querySelector(".text");
+          if (textSpan) textSpan.textContent = "Saving...";
+        }
+
+        try {
+          // Save address
+          await saveAddress(payload);
+
+          // Success: reset form and close
+          form.reset();
+          form.classList.remove("is-open");
+          form.style.display = "none";
+
+          // Optional: Show success toast (if Notyf is available)
+          if (window.notyf) {
+            notyf.success("Address added successfully!");
+          }
+          setTimeout(() => location.reload(), 500);
+
+        } catch (err) {
+          
+          // Optional: Show error toast
+          if (window.notyf) {
+            notyf.error(err.message || "Failed to add address.");
+          } else {
+            alert(err.message || "Something went wrong.");
+          }
+
+        } finally {
+          // Re-enable submit button
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            const textSpan = submitBtn.querySelector(".text");
+            if (textSpan) textSpan.textContent = originalText;
+          }
+        }
+      });
+    });
+  })();
+</script>

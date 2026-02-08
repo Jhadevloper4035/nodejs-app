@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include("partials/head") %>
+  </head>
+  <body class="fade-in">
+    <%- include("partials/loader") %>
+    <%- include("partials/nav") %>
+    <main class="container">
+      <%- include("partials/flash") %>
+      <%- body %>
+      <%- include("partials/footer") %>
+    </main>
+  </body>
+</html>
+
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+      window.LOCALE = 'en';
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+      window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+
+      window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+      window.translation = {
+        common: {
+          selectedList: '{quantity} list selected',
+          selectedLists: '{quantity} lists selected'
+        }
+      };
+
+      var AUTOHIDE = Boolean(0);
+    </script>
+
+
+
+
+    <section class="card">
+  <h1>Dashboard</h1>
+  <p>Welcome, <strong>
+      <%= user.name %>
+    </strong> (<%= user.email %>)</p>
+
+  <% if (!user.emailVerified) { %>
+    <div class="warning">
+      <p>Your email is <strong>not verified</strong>.</p>
+      <a class="btn navlink" href="/verify-email">Verify now</a>
+    </div>
+    <% } else { %>
+      <div class="success">
+        <p>Email verified ✅</p>
+      </div>
+      <% } %>
+
+        <hr />
+
+        <form action="/logout-all" method="POST">
+          <button class="btn btn--danger" type="submit">Logout from all devices</button>
+        </form>
+</section>

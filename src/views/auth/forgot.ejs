@@ -1,0 +1,50 @@
+<div class="auth-bg">
+  <div class="auth-card">
+    <div class="auth-left">
+      <div class="auth-image">
+        <img src="/img/hero.jpg" alt="Product" />
+        <div class="auth-brand">Curve Comfort</div>
+      </div>
+    </div>
+
+    <div class="auth-right">
+      <h1 class="auth-title">
+        <%= title || "Welcome" %>
+      </h1>
+
+      <% if (subtitle) { %>
+        <p class="auth-subtitle">
+          <%= subtitle %>
+        </p>
+        <% } %>
+
+
+
+
+
+
+          <form class="auth-form" action="/forgot-password" method="POST">
+            <div class="field">
+              <label>Email</label>
+              <input name="email" type="email" placeholder="johndoe@mail.domain" required />
+            </div>
+
+            <button class="auth-btn" type="submit">Send Reset OTP</button>
+
+            <div class="bottom">
+              Back to <a class="link" href="/login">Login</a>
+            </div>
+          </form>
+
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function togglePassword(btn) {
+    const input = btn?.parentElement?.querySelector("input");
+    if (!input) return;
+    input.type = input.type === "password" ? "text" : "password";
+  }
+</script>

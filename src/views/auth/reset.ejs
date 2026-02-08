@@ -1,0 +1,75 @@
+<div class="auth-bg">
+  <div class="auth-card">
+    <div class="auth-left">
+      <div class="auth-image">
+        <img src="/img/hero.jpg" alt="Product" />
+        <div class="auth-brand">Curve Comfort</div>
+      </div>
+    </div>
+
+    <div class="auth-right">
+      <h1 class="auth-title">
+        <%= title || "Welcome" %>
+      </h1>
+
+      <% if (subtitle) { %>
+        <p class="auth-subtitle">
+          <%= subtitle %>
+        </p>
+        <% } %>
+
+          <% if (msg) { %>
+            <div class="auth-alert">
+              <%= msg %>
+            </div>
+            <% } %>
+
+              <% if (errors && errors.length) { %>
+                <div class="auth-errors">
+                  <ul>
+                    <% errors.forEach(e=> { %>
+                      <li>
+                        <%= e %>
+                      </li>
+                      <% }) %>
+                  </ul>
+                </div>
+                <% } %>
+
+                  <form class="auth-form" action="/reset-password" method="POST">
+                    <div class="field">
+                      <label>Email</label>
+                      <input name="email" type="email" placeholder="johndoe@mail.domain" required />
+                    </div>
+
+                    <div class="field">
+                      <label>OTP</label>
+                      <input name="otp" type="text" inputmode="numeric" placeholder="Enter OTP" required />
+                    </div>
+
+                    <div class="field">
+                      <label>New Password</label>
+                      <div class="password">
+                        <input name="password" type="password" placeholder="Enter new password" required />
+                        <button class="eye" type="button" onclick="togglePassword(this)">👁</button>
+                      </div>
+                    </div>
+
+                    <button class="auth-btn" type="submit">Reset Password</button>
+
+                    <div class="bottom">
+                      Didn't get an OTP? <a class="link" href="/forgot-password">Resend</a>
+                    </div>
+                  </form>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function togglePassword(btn) {
+    const input = btn?.parentElement?.querySelector("input");
+    if (!input) return;
+    input.type = input.type === "password" ? "text" : "password";
+  }
+</script>
