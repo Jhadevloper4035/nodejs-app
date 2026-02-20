@@ -7,41 +7,34 @@ const expressLayouts = require("express-ejs-layouts");
 
 const { NODE_ENV, IS_PROD, CORS_ORIGIN } = require("./config/env");
 
-
 // Middlewares
-const { requestId, helmetConfig,  } = require("./middlewares/security");
+const { requestId, helmetConfig } = require("./middlewares/security");
 const { errorHandler } = require("./middlewares/errorHandler");
 const { attachUserIfAny } = require("./middlewares/auth");
 
-
-// routes 
+// Routes
 const authRoutes = require("./routes/authRoutes");
 const pageRoutes = require("./routes/pageRoutes");
 const addressRoutes = require("./routes/addressRoute");
+const categoryRoutes = require("./routes/categoryRoute");
+const productRoutes = require("./routes/productRoute");
+const cartRoutes = require("./routes/cartRoute")
 
-
+const { connectRedis } = require("./config/redis");
+const { categoryMiddleware } = require("./middlewares/categoryMiddleware");
 
 const createApp = () => {
-
-
   const app = express();
 
-  // If running behind a reverse proxy in production (nginx, render, heroku, etc.)
-  // this ensures req.secure and client ip are resolved correctly.
   if (IS_PROD) app.set("trust proxy", 1);
 
-  // Request tracking
   app.use(requestId);
-
-
-  // Security
   app.use(helmetConfig());
+
   app.use(
     cors({
-      // Best practice: allow a configured allow-list. Supports comma-separated list.
       origin: (origin, cb) => {
         const allowed = String(CORS_ORIGIN || "").split(",").map((s) => s.trim()).filter(Boolean);
-        // Same-origin or non-browser clients may omit Origin.
         if (!origin) return cb(null, true);
         if (allowed.length === 0) return cb(null, true);
         return allowed.includes(origin) ? cb(null, true) : cb(new Error("Not allowed by CORS"));
@@ -50,33 +43,37 @@ const createApp = () => {
     })
   );
 
-
   // Parsers
   app.use(express.urlencoded({ extended: false, limit: "10mb" }));
   app.use(express.json({ limit: "10mb" }));
   app.use(cookieParser());
 
   // Logs
-  if (NODE_ENV !== "test") app.use(morgan("dev"));
+  // if (NODE_ENV !== "test") app.use(morgan("dev")); 
 
   // Views
-
   app.set("view engine", "ejs");
   app.use(expressLayouts);
   app.set("layout", "layout");
   app.set("views", path.join(__dirname, "views"));
 
+  // ✅ Static BEFORE routes
+  app.use("/", express.static(path.join(__dirname, "public")));
 
-  // Attach user 
+  // Attach user
   app.use(attachUserIfAny);
 
-  // Default view locals (prevents EJS ReferenceError when a route doesn't set them)
+  // Attch category adn subcategory
+  app.use(categoryMiddleware);
+
+  // Default view locals
   app.use((req, res, next) => {
     res.locals.title = res.locals.title || "SecureEJS";
     res.locals.user = res.locals.user || null;
     res.locals.msg = res.locals.msg || null;
     res.locals.errors = res.locals.errors || [];
     res.locals.values = res.locals.values || {};
+    res.locals.categories = res.locals.categories || []; // ✅ added default
     next();
   });
 
@@ -89,27 +86,21 @@ const createApp = () => {
   });
 
 
+  // API Routes
+  app.use("/api/user/address", addressRoutes);
+  app.use("/api/categories", categoryRoutes);
+  app.use("/api/products", productRoutes);
+  app.use("/api/cart", cartRoutes);
 
-  // Static
-  app.use("/", express.static(path.join(__dirname, "public")));
-
-
-
-  app.use("/api/user/address" , addressRoutes )
-
-  // Routes
+  // Page Routes
   app.use(authRoutes);
   app.use(pageRoutes);
-
-
-  
 
   // Health
   app.get("/health", (_req, res) => res.json({ ok: true }));
 
   // 404
-  app.use((_req, res) => res.status(404).render("404", { user: null }));
-
+  app.use((_req, res) => res.status(404).render("404", { user: null, categories: [] })); // ✅ added categories
 
   // Error handler (must be last)
   app.use(errorHandler);
@@ -117,4 +108,16 @@ const createApp = () => {
   return app;
 };
 
-module.exports = { createApp };
+// ✅ initializeApp moved outside createApp and exported
+const initializeApp = async () => {
+  try {
+    await connectRedis();
+    await categoryCache.init();
+    console.log("✅ App initialized successfully");
+  } catch (error) {
+    console.error("❌ Failed to initialize app:", error);
+    process.exit(1);
+  }
+};
+
+module.exports = { createApp, initializeApp };

@@ -12,7 +12,6 @@ const connectMongo = async () => {
   
   const connection = mongoose.connection;
   console.log(`✅ Database is connected successfully`);
-  
   connection.on('error', (err) => console.error("❌ MongoDB error:", err.message));
   connection.on('disconnected', () => console.log("⚠️  MongoDB disconnected"));
   

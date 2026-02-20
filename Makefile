@@ -24,6 +24,9 @@ restart:
 build:
 	docker-compose up -d --build
 
+app-logs:
+	docker logs -f app-app-1
+
 clean:
 	docker-compose down -v
 	docker system prune -f

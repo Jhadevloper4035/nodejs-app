@@ -1,0 +1,674 @@
+<%
+// ✅ Define once at the TOP so it's available everywhere in this file
+const formatPrice = (price) => '₹' + Number(price || 0).toLocaleString('en-IN');
+%>
+
+<!-- breadcrumb -->
+<div class="tf-breadcrumb">
+    <div class="container">
+        <div class="tf-breadcrumb-wrap">
+            <div class="tf-breadcrumb-list">
+                <a href="/" class="text text-caption-1">Home</a>
+                <i class="icon icon-arrRight"></i>
+                <a href="/shop/<%= product.category.slug %>" class="text text-caption-1">
+                    <%= product.category.name %>
+                </a>
+                <i class="icon icon-arrRight"></i>
+                <span class="text text-caption-1">
+                    <%= product.title %>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /breadcrumb -->
+
+<!-- tf-add-cart-success -->
+<div class="tf-add-cart-success">
+    <div class="tf-add-cart-heading">
+        <h5>Shopping Cart</h5>
+        <i class="icon icon-close tf-add-cart-close"></i>
+    </div>
+    <div class="tf-add-cart-product">
+        <div class="image">
+            <img id="cart-success-img" src="<%= product.images[0] %>" alt="<%= product.title %>">
+        </div>
+        <div class="content">
+            <div class="text-title">
+                <a class="link" href="/product/<%= product.slug %>">
+                    <%= product.title %>
+                </a>
+            </div>
+            <div class="text-caption-1 text-secondary-2">
+                <%= product.brand %>
+            </div>
+            <div class="text-title">
+                <%= formatPrice(product.price) %>
+            </div>
+        </div>
+    </div>
+    <a href="/cart" class="tf-btn w-100 btn-fill radius-4">
+        <span class="text text-btn-uppercase">View cart</span>
+    </a>
+</div>
+<!-- /tf-add-cart-success -->
+
+
+<!-- ===================== Product Main ===================== -->
+<section class="flat-spacing">
+    <div class="tf-main-product section-image-zoom">
+        <div class="container">
+            <div class="row">
+
+                <!-- ── Left: Image Gallery ── -->
+                <div class="col-md-6">
+                    <div class="tf-product-media-wrap sticky-top">
+                        <div class="thumbs-slider">
+
+                            <!-- Thumbnails (vertical) -->
+                            <div dir="ltr" class="swiper tf-product-media-thumbs other-image-zoom"
+                                data-direction="vertical">
+                                <div class="swiper-wrapper stagger-wrap">
+                                    <% product.images.forEach(function(img, i) { %>
+                                        <div class="swiper-slide stagger-item" data-color="gray">
+                                            <div class="item">
+                                                <img class="lazyload" data-src="<%= img %>" src="<%= img %>"
+                                                    alt="<%= product.title %> view <%= i + 1 %>">
+                                            </div>
+                                        </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+
+                            <!-- Main image -->
+                            <div dir="ltr" class="swiper tf-product-media-main" id="gallery-swiper-started">
+                                <div class="swiper-wrapper">
+                                    <% product.images.forEach(function(img, i) { %>
+                                        <div class="swiper-slide">
+                                            <a href="<%= img %>" target="_blank" class="item" data-pswp-width="800px"
+                                                data-pswp-height="800px">
+                                                <img class="tf-image-zoom lazyload" data-zoom="<%= img %>"
+                                                    data-src="<%= img %>" src="<%= img %>"
+                                                    alt="<%= product.title %> view <%= i + 1 %>">
+                                            </a>
+                                        </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /Left -->
+
+                <!-- ── Right: Product Info ── -->
+                <div class="col-md-6">
+                    <div class="tf-product-info-wrap position-relative">
+                        <div class="tf-zoom-main"></div>
+                        <div class="tf-product-info-list other-image-zoom">
+
+                            <!-- Name / Rating -->
+                            <div class="tf-product-info-heading">
+                                <div class="tf-product-info-name">
+                                    <div class="text text-btn-uppercase">
+                                        <%= product.category.name %>
+                                    </div>
+                                    <h3 class="name">
+                                        <%= product.title %>
+                                    </h3>
+                                    <div class="sub">
+                                        <div class="tf-product-info-rate">
+                                            <div class="list-star">
+                                                <%
+                                                  const fullStars = Math.floor(product.rating);
+                                                  const halfStar = (product.rating % 1) >= 0.5;
+                                                  const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+                                                %>
+                                                <% for(let s=0; s < fullStars; s++) { %>
+                                                    <i class="icon icon-star"></i>
+                                                <% } %>
+                                                <% if(halfStar) { %>
+                                                    <i class="icon icon-star-half"></i>
+                                                <% } %>
+                                                <% for(let s=0; s < emptyStars; s++) { %>
+                                                    <i class="icon icon-star-empty"></i>
+                                                <% } %>
+                                            </div>
+                                            <div class="text text-caption-1">(<%= product.reviewsCount %> reviews)</div>
+                                        </div>
+                                        <% if(product.inStock) { %>
+                                            <div class="tf-product-info-sold">
+                                                <i class="icon icon-lightning"></i>
+                                                <div class="text text-caption-1">In Stock</div>
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="tf-product-info-desc">
+                                    <div class="tf-product-info-price">
+                                        <% if(product.isOnSale) { %>
+                                            <h5 class="price-on-sale font-2">
+                                                <%= formatPrice(product.price) %>
+                                            </h5>
+                                            <div class="compare-at-price font-2">
+                                                <%= formatPrice(product.oldPrice) %>
+                                            </div>
+                                            <div class="badges-on-sale text-btn-uppercase">
+                                                -<%= product.salePercentage %>%
+                                            </div>
+                                        <% } else { %>
+                                            <h5 class="price font-2">
+                                                <%= formatPrice(product.price) %>
+                                            </h5>
+                                        <% } %>
+                                    </div>
+
+                                    <span id="unit-price" data-unit-price="<%= product.price %>" style="display:none;"></span>
+
+                                    <p>
+                                        <%= product.description %>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- /Name / Rating -->
+
+                            <!-- ── Add to Cart section ── -->
+                            <div class="tf-product-info-choose-option">
+
+                                <!-- 
+                                    ✅ MAIN QUANTITY CONTROL
+                                    Single source of truth: id="main-qty"
+                                    Both + and - use data-action on THIS wrapper
+                                -->
+                                <div class="tf-product-info-quantity">
+                                    <div class="title mb_12">Quantity:</div>
+                                    <div class="wg-quantity" id="main-qty-wrap">
+                                        <span class="btn-quantity" data-action="decrease">-</span>
+                                        <input 
+                                            id="main-qty"
+                                            class="quantity-product" 
+                                            type="text" 
+                                            name="number" 
+                                            value="1" 
+                                            min="1"
+                                            max="<%= product.stock %>"
+                                            autocomplete="off"
+                                        >
+                                        <span class="btn-quantity" data-action="increase">+</span>
+                                    </div>
+                                </div>
+
+                                <!-- CTA Buttons -->
+                                <div>
+                                    <div class="tf-product-info-by-btn mb_10">
+
+                                        <a href="javascript:void(0);"
+                                            data-product-id="<%= product._id %>"
+                                            class="btn-style-2 flex-grow-1 text-btn-uppercase fw-6 btn-add-to-cart">
+                                            <span>Add to cart —&nbsp;</span>
+                                            <span class="tf-qty-price total-price">
+                                                <%= formatPrice(product.price) %>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                            class="box-icon hover-tooltip text-caption-2 wishlist btn-icon-action">
+                                            <span class="icon icon-heart"></span>
+                                            <span class="tooltip text-caption-2">Wishlist</span>
+                                        </a>
+                                    </div>
+
+                                    <a href="/checkout?product=<%= product._id %>"
+                                        class="btn-style-3 text-btn-uppercase">Buy it now</a>
+                                </div>
+
+                                <!-- Delivery / Return info -->
+                                <div class="tf-product-info-help">
+                                    <div class="tf-product-info-extra-link">
+                                        <a href="#delivery_return" data-bs-toggle="modal" class="tf-product-extra-icon">
+                                            <div class="icon"><i class="icon-shipping"></i></div>
+                                            <p class="text-caption-1">Delivery & Return</p>
+                                        </a>
+                                        <a href="#ask_question" data-bs-toggle="modal" class="tf-product-extra-icon">
+                                            <div class="icon"><i class="icon-question"></i></div>
+                                            <p class="text-caption-1">Ask A Question</p>
+                                        </a>
+                                        <a href="#share_social" data-bs-toggle="modal" class="tf-product-extra-icon">
+                                            <div class="icon"><i class="icon-share"></i></div>
+                                            <p class="text-caption-1">Share</p>
+                                        </a>
+                                    </div>
+                                    <div class="tf-product-info-time">
+                                        <div class="icon"><i class="icon-timer"></i></div>
+                                        <p class="text-caption-1">Estimated Delivery:&nbsp;&nbsp;<span>5-7 business days</span></p>
+                                    </div>
+                                    <div class="tf-product-info-return">
+                                        <div class="icon"><i class="icon-arrowClockwise"></i></div>
+                                        <p class="text-caption-1">Return within <span>30 days</span> of purchase.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Meta info -->
+                                <ul class="tf-product-info-sku">
+                                    <li>
+                                        <p class="text-caption-1">Brand:</p>
+                                        <p class="text-caption-1 text-1"><%= product.brand %></p>
+                                    </li>
+                                    <li>
+                                        <p class="text-caption-1">Style:</p>
+                                        <p class="text-caption-1 text-1"><%= product.attributes.style %></p>
+                                    </li>
+                                    <li>
+                                        <p class="text-caption-1">Color:</p>
+                                        <p class="text-caption-1 text-1"><%= product.attributes.color %></p>
+                                    </li>
+                                    <li>
+                                        <p class="text-caption-1">Room:</p>
+                                        <p class="text-caption-1 text-1"><%= product.attributes.roomType %></p>
+                                    </li>
+                                    <li>
+                                        <p class="text-caption-1">Available:</p>
+                                        <p class="text-caption-1 text-1">
+                                            <%= product.inStock ? 'In Stock' : 'Out of Stock' %>
+                                        </p>
+                                    </li>
+
+                                    <% if(product.subcategories && product.subcategories.length) { %>
+                                        <li>
+                                            <p class="text-caption-1">Categories:</p>
+                                            <p class="text-caption-1">
+                                                <% product.subcategories.forEach(function(sub, i) { %>
+                                                    <% if(typeof sub === 'object') { %>
+                                                        <a href="/shop/<%= sub.slug %>" class="text-1 link">
+                                                            <%= sub.name %>
+                                                        </a>
+                                                        <% if(i < product.subcategories.length - 1) { %>, <% } %>
+                                                    <% } %>
+                                                <% }); %>
+                                            </p>
+                                        </li>
+                                    <% } %>
+
+                                    <% if(product.assemblyRequired) { %>
+                                        <li>
+                                            <p class="text-caption-1">Assembly:</p>
+                                            <p class="text-caption-1 text-1">Required</p>
+                                        </li>
+                                    <% } %>
+                                </ul>
+
+                                <!-- Secure checkout icons -->
+                                <div class="tf-product-info-guranteed">
+                                    <div class="text-title">Guaranteed safe checkout:</div>
+                                    <div class="tf-payment">
+                                        <a href="#"><img src="/images/payment/img-1.png" alt="Visa"></a>
+                                        <a href="#"><img src="/images/payment/img-2.png" alt="Mastercard"></a>
+                                        <a href="#"><img src="/images/payment/img-3.png" alt="Amex"></a>
+                                        <a href="#"><img src="/images/payment/img-4.png" alt="PayPal"></a>
+                                        <a href="#"><img src="/images/payment/img-5.png" alt="UPI"></a>
+                                        <a href="#"><img src="/images/payment/img-6.png" alt="Pay"></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /choose-option -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /Right -->
+
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </div>
+
+    <!-- 
+        ✅ STICKY BAR
+        - Sticky qty is DISPLAY ONLY (mirrors #main-qty, not a separate input)
+        - Clicking +/- here updates #main-qty and syncs back
+    -->
+    <div class="tf-sticky-btn-atc">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-sticky-atc">
+                        <div class="tf-sticky-atc-product">
+                            <div class="image">
+                                <img class="lazyload" data-src="<%= product.images[0] %>" src="<%= product.images[0] %>"
+                                    alt="<%= product.title %>">
+                            </div>
+                            <div class="content">
+                                <div class="text-title"><%= product.title %></div>
+                                <div class="text-caption-1 text-secondary-2"><%= product.brand %></div>
+                                <div class="text-title"><%= formatPrice(product.price) %></div>
+                            </div>
+                        </div>
+                        <div class="tf-sticky-atc-infos">
+                            <div class="tf-sticky-atc-quantity d-flex gap-12 align-items-center">
+                                <div class="tf-sticky-atc-infos-title text-title">Quantity:</div>
+                                <!-- 
+                                    ✅ Sticky qty: uses data-action same as main
+                                    No separate input — clicking these updates #main-qty
+                                -->
+                                <div class="wg-quantity style-1" id="sticky-qty-wrap">
+                                    <span class="btn-quantity" data-action="decrease">-</span>
+                                    <span class="sticky-qty-display" id="sticky-qty-display">1</span>
+                                    <span class="btn-quantity" data-action="increase">+</span>
+                                </div>
+                            </div>
+                            <div class="tf-sticky-atc-btns">
+                                <a href="javascript:void(0);"
+                                    data-product-id="<%= product._id %>"
+                                    class="tf-btn w-100 btn-reset radius-4 btn-add-to-cart">
+                                    <span class="text text-btn-uppercase">Add To Cart</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Product Main -->
+
+
+<!-- ===================== Description Tabs ===================== -->
+<section class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="widget-tabs style-1">
+                    <ul class="widget-menu-tab">
+                        <li class="item-title active"><span class="inner">Description</span></li>
+                        <li class="item-title"><span class="inner">Shipping & Returns</span></li>
+                        <li class="item-title"><span class="inner">Return Policies</span></li>
+                    </ul>
+                    <div class="widget-content-tab">
+
+                        <!-- Description -->
+                        <div class="widget-content-inner active">
+                            <div class="tab-description">
+                                <div class="right">
+                                    <div class="letter-1 text-btn-uppercase mb_12">
+                                        <%= product.title %>
+                                    </div>
+                                    <p class="mb_12 text-secondary">
+                                        <%= product.description %>
+                                    </p>
+                                    <% if(product.careInstructions && product.careInstructions.length) { %>
+                                        <ul class="list-text type-disc mb_12 gap-6">
+                                            <% product.careInstructions.forEach(function(instr) { %>
+                                                <li class="font-2"><%= instr %></li>
+                                            <% }); %>
+                                        </ul>
+                                    <% } %>
+                                </div>
+                                <div class="left">
+                                    <div class="letter-1 text-btn-uppercase mb_12">Product Details</div>
+                                    <ul class="list-text type-disc mb_12 gap-6">
+                                        <li class="font-2">Brand: <%= product.brand %></li>
+                                        <li class="font-2">Color: <%= product.attributes.color %></li>
+                                        <li class="font-2">Style: <%= product.attributes.style %></li>
+                                        <li class="font-2">Room Type: <%= product.attributes.roomType %></li>
+                                        <% if(product.assemblyRequired) { %>
+                                            <li class="font-2">Assembly Required</li>
+                                        <% } else { %>
+                                            <li class="font-2">No Assembly Required</li>
+                                        <% } %>
+                                        <% if(product.warranty) { %>
+                                            <li class="font-2">Warranty: <%= product.warranty %></li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping -->
+                        <div class="widget-content-inner">
+                            <div class="tab-shipping">
+                                <div class="w-100">
+                                    <div class="text-btn-uppercase mb_12">We've got your back</div>
+                                    <p class="mb_12">Free shipping on orders over ₹5,000.</p>
+                                    <p>Free returns within 30 days (excludes final sale items).</p>
+                                </div>
+                                <div class="w-100">
+                                    <div class="text-btn-uppercase mb_12">Estimated delivery</div>
+                                    <p class="mb_6 font-2">Standard: 5-7 business days</p>
+                                    <p class="font-2">Express: 2-3 business days</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Return Policies -->
+                        <div class="widget-content-inner">
+                            <div class="tab-policies">
+                                <div class="text-btn-uppercase mb_12">Return Policies</div>
+                                <p class="mb_12 text-secondary">We stand behind the quality of our products. If you're
+                                    not completely satisfied with your purchase, we offer hassle-free returns within 30
+                                    days of delivery.</p>
+                                <div class="text-btn-uppercase mb_12">Simple Process</div>
+                                <ul class="list-text type-number">
+                                    <li class="text-secondary font-2">Initiate your return online or contact our customer service team.</li>
+                                    <li class="text-secondary font-2">Pack your item securely with the original packaging.</li>
+                                    <li class="text-secondary font-2">Ship your return using our prepaid shipping label.</li>
+                                    <li class="text-secondary font-2">Once received, your refund will be processed within 5-7 business days.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Description Tabs -->
+
+
+<!-- Related Products -->
+<section class="flat-spacing">
+    <div class="container">
+        <div class="heading-section text-center wow fadeInUp">
+            <h3 class="heading">Related Products</h3>
+            <p class="subheading text-secondary">Explore Related Products: handpicked items that perfectly complement your selection. Discover more styles you may love.</p>
+        </div>
+        <div dir="ltr" class="swiper tf-sw-latest" data-preview="4" data-tablet="3" data-mobile="2" data-space-lg="30"
+            data-space-md="30" data-space="15" data-pagination="1" data-pagination-md="1" data-pagination-lg="1"
+            data-autoplay="3000" data-loop="true">
+            <div class="swiper-wrapper">
+                <% relatedProducts.forEach(product => { %>
+                    <%- include("product-card", { product: product }) %>
+                <% }) %>
+            </div>
+            <div class="sw-pagination-latest sw-dots type-circle justify-content-center"></div>
+        </div>
+    </div>
+</section>
+<!-- /Related Products -->
+
+
+<link rel="stylesheet" href="/css/cart-success.css" />
+
+<script>
+  window.__IS_LOGGED_IN__ = <%- user ? "true" : "false" %>;
+  window.__UNIT_PRICE__   = <%- product.price %>;
+  window.__MAX_STOCK__    = <%- product.stock %>;
+</script>
+
+<script>
+
+    (() => {
+  // ─────────────────────────────────────────
+  // CONFIG
+  // ─────────────────────────────────────────
+  const isLoggedIn = window.__IS_LOGGED_IN__ === true;
+  const unitPrice = Number(window.__UNIT_PRICE__ || 0);
+  const maxStock = Number(window.__MAX_STOCK__ || 99);
+
+  const formatINR = (n) => '₹' + Number(n || 0).toLocaleString('en-IN');
+
+  // ─────────────────────────────────────────
+  // ELEMENTS
+  // ─────────────────────────────────────────
+  const mainQtyInput = document.getElementById('main-qty');          // the real <input>
+  const stickyDisplay = document.getElementById('sticky-qty-display'); // sticky <span>
+  const successPanel = document.querySelector('.tf-add-cart-success');
+  const successClose = document.querySelector('.tf-add-cart-close');
+  const successImg = document.getElementById('cart-success-img');
+  const successTitleEl = successPanel?.querySelector('.tf-add-cart-product .content .text-title a.link');
+  const successPriceEl = successPanel?.querySelector('.tf-add-cart-product .content .text-title:last-child');
+
+  // ─────────────────────────────────────────
+  // QUANTITY  — single source of truth
+  // ─────────────────────────────────────────
+  const getQty = () => {
+    const v = parseInt(mainQtyInput?.value || '1', 10);
+    return Number.isFinite(v) && v > 0 ? Math.min(maxStock, v) : 1;
+  };
+
+  const setQty = (v) => {
+    const clamped = Math.min(maxStock, Math.max(1, v));
+    if (mainQtyInput) mainQtyInput.value = String(clamped);
+    if (stickyDisplay) stickyDisplay.textContent = String(clamped); // mirror to sticky
+    updateTotalPriceUI(clamped);
+  };
+
+  const updateTotalPriceUI = (qty) => {
+    const q = qty ?? getQty();
+    document.querySelectorAll('.total-price').forEach(el => {
+      el.textContent = formatINR(unitPrice * q);
+    });
+  };
+
+  // ─────────────────────────────────────────
+  // SINGLE delegated click for + / -
+  // Works for BOTH the main bar and sticky bar
+  // because both use data-action="increase/decrease"
+  // ─────────────────────────────────────────
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-action]');
+    if (!btn) return;
+    const action = btn.dataset.action;
+    if (action !== 'increase' && action !== 'decrease') return;
+
+    e.preventDefault();
+    const next = action === 'increase' ? getQty() + 1 : getQty() - 1;
+    setQty(next);  // clamps, syncs both inputs + price label
+  }, { passive: false });
+
+  // If user types directly in the input
+  mainQtyInput?.addEventListener('input', () => {
+    const v = parseInt(mainQtyInput.value, 10);
+    if (Number.isFinite(v)) setQty(v);
+  });
+
+  // ─────────────────────────────────────────
+  // SUCCESS PANEL
+  // ─────────────────────────────────────────
+  const showSuccess = () => successPanel?.classList.add('show');
+  const hideSuccess = () => successPanel?.classList.remove('show');
+  successClose?.addEventListener('click', hideSuccess);
+
+  // ─────────────────────────────────────────
+  // NAVBAR COUNT  — reads from server on load
+  // and updates after every add-to-cart
+  // ─────────────────────────────────────────
+  const setNavCount = (count) => {
+    // Supports multiple badge elements in your navbar
+    document.querySelectorAll('#nav-cart-count, .nav-cart-count').forEach(el => {
+      el.textContent = String(count ?? 0);
+    });
+  };
+
+  const fetchNavCount = async () => {
+    if (!isLoggedIn) return;
+    try {
+      const res = await fetch('/api/cart/count');
+      if (!res.ok) return;
+      const data = await res.json();
+      setNavCount(data.count ?? 0);
+    } catch { /* silent */ }
+  };
+
+  // ─────────────────────────────────────────
+  // ADD TO CART
+  // ─────────────────────────────────────────
+  const addToCart = async (btn) => {
+    const productId = btn.getAttribute('data-product-id');
+    if (!productId) return;
+
+    if (!isLoggedIn) {
+      window.location.href = `/login?next=${encodeURIComponent(window.location.pathname)}`;
+      return;
+    }
+
+    const quantity = getQty();
+
+    // Disable button while request is in-flight
+    btn.classList.add('loading');
+    btn.style.pointerEvents = 'none';
+
+    try {
+      const res = await fetch('/api/cart/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ productId, quantity })
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        if (res.status === 401 && data.redirectTo) {
+          window.location.href = data.redirectTo;
+          return;
+        }
+        alert(data.message || 'Could not add to cart');
+        return;
+      }
+
+      // ✅ Update navbar badge with count returned from server
+      setNavCount(data.count ?? 0);
+
+      // ✅ Update success panel
+      if (data.addedItem) {
+        const it = data.addedItem;
+        if (successImg && it.image) successImg.src = it.image;
+        if (successTitleEl && it.name) successTitleEl.textContent = it.name;
+        if (successPriceEl && it.price) successPriceEl.textContent = formatINR(it.price);
+      }
+      showSuccess();
+
+    } catch {
+      alert('Network error. Please try again.');
+    } finally {
+      btn.classList.remove('loading');
+      btn.style.pointerEvents = '';
+    }
+  };
+
+  // ─────────────────────────────────────────
+  // SINGLE delegated click for Add to Cart
+  // Covers BOTH main button and sticky button
+  // ─────────────────────────────────────────
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn-add-to-cart');
+    if (!btn) return;
+    e.preventDefault();
+    addToCart(btn);
+  });
+
+  // ─────────────────────────────────────────
+  // INIT
+  // ─────────────────────────────────────────
+  setQty(1);         // sync sticky display + price label on first load
+  fetchNavCount();   // load correct count from server on page load
+
+})();
+
+
+</script>
+
+

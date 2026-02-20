@@ -3,17 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Modave - Multipurpose eCommerce</title>
+  <title>Curve & Comfort-Where elegant design meets everyday comfort</title>
   <meta name="author" content="themesflat.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Themesflat Modave, Multipurpose eCommerce Template">
 
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/css/auth.css">
+
   <!-- font -->
   <link rel="stylesheet" href="/fonts/fonts.css">
   <link rel="stylesheet" href="/fonts/font-icons.css">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/drift-basic.min.css">
+  <link rel="stylesheet" href="/css/photoswipe.css">
   <link rel="stylesheet" href="/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/css/sib-styles.css">
@@ -57,13 +60,13 @@
 
   <div id="wrapper">
 
-    <%- include("partials/topbar") %>
 
-      <%- include("partials/nav") %>
 
-        <%- body %>
+    <%- include("partials/nav") %>
 
-          <%- include("partials/footer") %>
+      <%- body %>
+
+        <%- include("partials/footer") %>
 
   </div>
 
@@ -80,19 +83,31 @@
 
 
 
-                <!-- Javascript -->
-                <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-                <script type="text/javascript" src="/js/jquery.min.js"></script>
-                <script type="text/javascript" src="/js/swiper-bundle.min.js"></script>
-                <script type="text/javascript" src="/js/carousel.js"></script>
-                <script type="text/javascript" src="/js/bootstrap-select.min.js"></script>
-                <script type="text/javascript" src="/js/lazysize.min.js"></script>
-                <script type="text/javascript" src="/js/count-down.js"></script>
-                <script type="text/javascript" src="/js/wow.min.js"></script>
-                <script type="text/javascript" src="/js/multiple-modal.js"></script>
-                <script type="text/javascript" src="/js/main.js"></script>
+                <!-- Core Libraries -->
+                <script src="/js/jquery.min.js"></script>
+                <script src="/js/bootstrap.min.js"></script>
+
+                <!-- UI / Plugins -->
+                <script src="/js/swiper-bundle.min.js"></script>
+                <script src="/js/carousel.js"></script>
+                <script src="/js/bootstrap-select.min.js"></script>
+                <script src="/js/lazysize.min.js"></script>
+                <script src="/js/wow.min.js"></script>
+
+                <!-- ⭐ Drift Image Zoom -->
+                <script src="/js/drift.min.js"></script>
+
+                <!-- Other Scripts -->
+                <script src="/js/count-down.js"></script>
+                <script src="/js/multiple-modal.js"></script>
+                <script src="/js/main.js"></script>
+
+                <!-- Forms -->
                 <script src="/js/sibforms.js" defer></script>
 
+                <!-- Modules -->
+                <script type="module" src="/js/model-viewer.min.js"></script>
+                <script type="module" src="/js/zoom.js"></script>
 
 
 

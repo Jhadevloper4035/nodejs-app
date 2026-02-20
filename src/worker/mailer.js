@@ -70,10 +70,7 @@ const renderTemplate = (template, data = {}) => {
 
 const sendMail = async ({ to, subject, template, data }) => {
   if (!hasSmtp()) {
-    // Dev-safe fallback
-    console.log("\n--- EMAIL JOB (SMTP not configured) ---");
-    console.log(JSON.stringify({ to, subject, template, data }, null, 2));
-    console.log("--- END JOB ---\n");
+ 
     return { ok: true, skipped: true };
   }
 

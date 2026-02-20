@@ -1,0 +1,81 @@
+
+<div class="swiper-slide">
+  <div class="card-product wow fadeInUp" data-wow-delay="0s">
+    <div class="card-product-wrapper">
+      <a href="/products/<%= product.slug %>" class="product-img">
+        <img class="lazyload img-product"
+             data-src="<%= product.images[0] %>"
+             src="<%= product.images[0] %>"
+             alt="<%= product.title %>">
+        <img class="lazyload img-hover"
+             data-src="<%= product.images[1] || product.images[0] %>"
+             src="<%= product.images[1] || product.images[0] %>"
+             alt="<%= product.title %>">
+      </a>
+
+      <div class="list-product-btn">
+        <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action"
+           data-product-id="<%= product._id %>">
+          <span class="icon icon-heart"></span>
+          <span class="tooltip">Wishlist</span>
+        </a>
+
+        <!-- FIXED QUICK VIEW: now same as working second card -->
+        <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading"
+           data-product="<%- JSON.stringify({
+              _id: product._id,
+              title: product.title,
+              slug: product.slug,
+              description: product.description,
+              price: product.price,
+              oldPrice: product.oldPrice,
+              currency: product.currency,
+              isOnSale: product.isOnSale,
+              salePercentage: product.salePercentage,
+              stock: product.stock,
+              inStock: product.inStock,
+              images: product.images,
+              category: product.category,
+              subcategories: product.subcategories,
+              brand: product.brand,
+              attributes: product.attributes,
+              dimensions: product.dimensions,
+              weight: product.weight,
+              assemblyRequired: product.assemblyRequired,
+              warranty: product.warranty,
+              careInstructions: product.careInstructions,
+              tags: product.tags,
+              rating: product.rating,
+              reviewsCount: product.reviewsCount
+           }).replace(/"/g, '&quot;') %>">
+          <span class="icon icon-eye"></span>
+          <span class="tooltip">Quick View</span>
+        </a>
+      </div>
+
+      <div class="list-btn-main">
+        <% if (product.inStock) { %>
+          <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product"
+             data-product-id="<%= product._id %>">
+            Add To cart
+          </a>
+        <% } else { %>
+          <button class="btn-main-product" disabled>Out of Stock</button>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="card-product-info">
+      <a href="/products/<%= product.slug %>" class="title link">
+        <%= product.title %>
+      </a>
+
+      <span class="price">
+        <% if (product.isOnSale) { %>
+          <span class="old-price">₹<%= product.oldPrice.toLocaleString('en-IN') %></span>
+        <% } %>
+        ₹<%= product.price.toLocaleString('en-IN') %>
+      </span>
+    </div>
+  </div>
+</div>

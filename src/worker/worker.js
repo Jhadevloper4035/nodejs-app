@@ -7,7 +7,6 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const startWorker = async () => {
   const { channel } = await connectRabbit();
 
-  console.log("Worker connected. Waiting for emails...");
 
   channel.consume(
     MAIL_QUEUE,

@@ -1,0 +1,341 @@
+<% const formatPrice=(p)=> '₹' + Number(p || 0).toLocaleString('en-IN');
+   const subtotal = Number(totalPrice || 0);
+   %>
+
+
+
+    <!-- breadcrumb -->
+    <div class="tf-breadcrumb">
+        <div class="container">
+            <div class="tf-breadcrumb-wrap">
+                <div class="tf-breadcrumb-list">
+                    <a href="/" class="text text-caption-1">Home</a>
+                    <i class="icon icon-arrRight"></i>
+                    <span class="text text-caption-1">Cart</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /breadcrumb -->
+
+
+
+
+
+<section class="flat-spacing">
+   <div class="container">
+      <div class="row">
+         <div class="col-xl-8">
+            <div class="tf-cart-sold">
+               <div class="notification-sold bg-surface">
+                  <img class="icon" src="/images/logo/icon-fire.png" alt="img">
+                  <div class="count-text">
+                     Your cart will expire in
+                     <div class="js-countdown time-count" data-timer="600" data-labels=":,:,:,"></div>
+                     minutes! Please checkout now before your items sell out!
+                  </div>
+               </div>
+               <div class="notification-progress">
+                  <div class="text">
+                     Buy <span class="fw-semibold text-primary">
+                     <%= formatPrice(5000) %>
+                     </span> more to get
+                     <span class="fw-semibold">Freeship</span>
+                  </div>
+                  <div class="progress-cart">
+                     <div class="value" style="width: 0%;" data-progress="50">
+                        <span class="round"></span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <% if(!items || items.length===0) { %>
+            <div class="bg-surface p-4 radius-8">
+               <h5 class="mb-2">Your cart is empty</h5>
+               <p class="text-secondary mb-3">Looks like you haven't added anything yet.</p>
+               <a href="/shop" class="tf-btn btn-reset">Continue Shopping</a>
+            </div>
+            <% } else { %>
+            <form>
+               <table class="tf-table-page-cart" id="cart-table">
+                  <thead>
+                     <tr>
+                        <th>Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total Price</th>
+                        <th></th>
+                     </tr>
+                  </thead>
+                  <tbody id="cart-tbody">
+                     <% items.forEach((item)=> { %>
+                     <tr class="tf-cart-item file-delete" data-product-id="<%= item.productId %>"
+                        data-unit-price="<%= item.price %>">
+                        <td class="tf-cart-item_product">
+                           <a href="/products/<%= item.slug %>" class="img-box">
+                           <img src="<%= item.image %>" alt="<%= item.name %>">
+                           </a>
+                           <div class="cart-info">
+                              <a href="/products/<%= item.slug %>" class="cart-title link">
+                              <%= item.name %>
+                              </a>
+                              <div class="variant-box" style="display:none;"></div>
+                           </div>
+                        </td>
+                        <td data-cart-title="Price" class="tf-cart-item_price text-center">
+                           <div class="cart-price text-button price-on-sale">
+                              <%= formatPrice(item.price) %>
+                           </div>
+                        </td>
+                        <td data-cart-title="Quantity" class="tf-cart-item_quantity">
+                           <div class="wg-quantity mx-md-auto">
+                              <span class="btn-quantity" data-action="decrease">-</span>
+                              <input type="text" class="quantity-product" name="number"
+                                 value="<%= item.quantity %>" min="1" autocomplete="off">
+                              <span class="btn-quantity" data-action="increase">+</span>
+                           </div>
+                        </td>
+                        <td data-cart-title="Total" class="tf-cart-item_total text-center">
+                           <div class="cart-total text-button total-price">
+                              <%= formatPrice(item.price * item.quantity) %>
+                           </div>
+                        </td>
+                        <td data-cart-title="Remove" class="remove-cart">
+                           <span class="remove icon icon-close js-remove-item"></span>
+                        </td>
+                     </tr>
+                     <% }) %>
+                  </tbody>
+               </table>
+            </form>
+            <% } %>
+         </div>
+         <!-- Right side summary -->
+         <div class="col-xl-4">
+            <div class="fl-sidebar-cart">
+               <div class="box-order bg-surface">
+                  <h5 class="title">Order Summary</h5>
+                  <div class="subtotal text-button d-flex justify-content-between align-items-center">
+                     <span>Subtotal</span>
+                     <span class="total" id="summary-subtotal">
+                     <%= formatPrice(subtotal) %>
+                     </span>
+                  </div>
+                  <div class="discount text-button d-flex justify-content-between align-items-center">
+                     <span>Discounts</span>
+                     <span class="total">
+                     <%= formatPrice(0) %>
+                     </span>
+                  </div>
+                  <div class="ship">
+                     <span class="text-button">Shipping</span>
+                     <div class="flex-grow-1">
+                        <fieldset class="ship-item">
+                           <input type="radio" name="ship-check" class="tf-check-rounded" id="free"
+                              checked>
+                           <label for="free">
+                           <span>Free Shipping</span>
+                           <span class="price">
+                           <%= formatPrice(0) %>
+                           </span>
+                           </label>
+                        </fieldset>
+                        <fieldset class="ship-item">
+                           <input type="radio" name="ship-check" class="tf-check-rounded" id="local">
+                           <label for="local">
+                           <span>Local:</span>
+                           <span class="price">
+                           <%= formatPrice(35) %>
+                           </span>
+                           </label>
+                        </fieldset>
+                        <fieldset class="ship-item">
+                           <input type="radio" name="ship-check" class="tf-check-rounded" id="rate">
+                           <label for="rate">
+                           <span>Flat Rate:</span>
+                           <span class="price">
+                           <%= formatPrice(35) %>
+                           </span>
+                           </label>
+                        </fieldset>
+                     </div>
+                  </div>
+                  <h5 class="total-order d-flex justify-content-between align-items-center">
+                     <span>Total</span>
+                     <span class="total" id="summary-total">
+                     <%= formatPrice(subtotal) %>
+                     </span>
+                  </h5>
+                  <div class="box-progress-checkout">
+                     <fieldset class="check-agree">
+                        <input type="checkbox" id="check-agree" class="tf-check-rounded">
+                        <label for="check-agree">
+                        I agree with the <a href="/term-of-use">terms and conditions</a>
+                        </label>
+                     </fieldset>
+                     <a href="/checkout" class="tf-btn btn-reset">Process To Checkout</a>
+                     <p class="text-button text-center"><a href="/shop" class="link">Or continue shopping</a>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<script>
+   (() => {
+       const formatINR = (n) => '₹' + Number(n || 0).toLocaleString('en-IN');
+   
+       // ── Recalculate order summary from all rows still in the DOM ──
+       const recalcSummary = () => {
+           let subtotal = 0;
+           document.querySelectorAll('.tf-cart-item').forEach(row => {
+               const unitPrice = Number(row.dataset.unitPrice || 0);
+               const qty = Number(row.querySelector('.quantity-product')?.value || 0);
+               subtotal += unitPrice * qty;
+           });
+           document.getElementById('summary-subtotal').textContent = formatINR(subtotal);
+           document.getElementById('summary-total').textContent = formatINR(subtotal);
+       };
+   
+       // ── Remove a row from UI + call API ──
+       const removeRow = async (row) => {
+           const productId = row.dataset.productId;
+   
+           // Animate out
+           row.style.transition = 'opacity 0.25s';
+           row.style.opacity = '0';
+           await new Promise(r => setTimeout(r, 250));
+           row.remove();
+   
+           recalcSummary();
+           updateNavCount();
+   
+           // Show empty state if no rows left
+           if (!document.querySelector('.tf-cart-item')) {
+               document.getElementById('cart-table')?.remove();
+               const form = document.querySelector('form');
+               if (form) {
+                   form.innerHTML = `
+     <div class="bg-surface p-4 radius-8">
+       <h5 class="mb-2">Your cart is empty</h5>
+       <p class="text-secondary mb-3">Looks like you haven't added anything yet.</p>
+       <a href="/shop" class="tf-btn btn-reset">Continue Shopping</a>
+     </div>`;
+               }
+           }
+   
+           // API call (fire-and-forget is fine here since UI is already updated)
+           try {
+               await fetch('/api/cart/remove', {
+                   method: 'POST',
+                   headers: { 'Content-Type': 'application/json' },
+                   body: JSON.stringify({ productId })
+               });
+           } catch { /* silent */ }
+       };
+   
+       // ── Update navbar cart badge ──
+       const updateNavCount = async () => {
+           try {
+               const res = await fetch('/api/cart/count');
+               if (!res.ok) return;
+               const data = await res.json();
+               document.querySelectorAll('#nav-cart-count, .nav-cart-count').forEach(el => {
+                   el.textContent = String(data.count ?? 0);
+               });
+           } catch { /* silent */ }
+       };
+   
+       // ── Update quantity via API ──
+       const updateQty = async (productId, quantity) => {
+           try {
+               await fetch('/api/cart/update', {
+                   method: 'POST',
+                   headers: { 'Content-Type': 'application/json' },
+                   body: JSON.stringify({ productId, quantity })
+               });
+           } catch { /* silent */ }
+       };
+   
+       // ─────────────────────────────────────────────────────────
+       // SINGLE delegated listener — handles +, -, remove, typing
+       // ─────────────────────────────────────────────────────────
+       document.addEventListener('click', async (e) => {
+   
+           // ── + / - buttons ──
+           const btn = e.target.closest('[data-action]');
+           if (btn) {
+               const action = btn.dataset.action;
+               if (action !== 'increase' && action !== 'decrease') return;
+   
+               const row = btn.closest('.tf-cart-item');
+               if (!row) return;
+   
+               const input = row.querySelector('.quantity-product');
+               const unitPrice = Number(row.dataset.unitPrice || 0);
+               const productId = row.dataset.productId;
+               let qty = parseInt(input.value, 10) || 1;
+   
+               if (action === 'increase') {
+                   qty = Math.min(qty + 1, 99);
+               } else {
+                   qty = qty - 1;
+                   // ✅ If qty reaches 0 → remove the row entirely
+                   if (qty <= 0) {
+                       removeRow(row);
+                       return;
+                   }
+               }
+   
+               input.value = qty;
+   
+               // Update row total
+               row.querySelector('.total-price').textContent = formatINR(unitPrice * qty);
+   
+               // Update summary
+               recalcSummary();
+   
+               // Sync to server (debounced per row)
+               clearTimeout(row._qtyTimer);
+               row._qtyTimer = setTimeout(() => updateQty(productId, qty), 600);
+               return;
+           }
+   
+           // ── X (remove) button ──
+           const removeBtn = e.target.closest('.js-remove-item');
+           if (removeBtn) {
+               const row = removeBtn.closest('.tf-cart-item');
+               if (row) removeRow(row);
+               return;
+           }
+       });
+   
+       // ── Manual typing in qty input ──
+       document.addEventListener('input', (e) => {
+           const input = e.target.closest('.quantity-product');
+           if (!input) return;
+   
+           const row = input.closest('.tf-cart-item');
+           if (!row) return;
+   
+           const unitPrice = Number(row.dataset.unitPrice || 0);
+           const productId = row.dataset.productId;
+           let qty = parseInt(input.value, 10);
+   
+           if (!Number.isFinite(qty) || qty < 1) return; // wait until valid
+   
+           qty = Math.min(qty, 99);
+           row.querySelector('.total-price').textContent = formatINR(unitPrice * qty);
+           recalcSummary();
+   
+           clearTimeout(row._qtyTimer);
+           row._qtyTimer = setTimeout(() => updateQty(productId, qty), 600);
+       });
+   
+       // ── Init: load correct navbar count on page load ──
+       updateNavCount();
+   
+   })();
+</script>

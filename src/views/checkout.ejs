@@ -1,0 +1,722 @@
+<%# ── Add to your layout.ejs head: ──
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+%>
+
+<!-- breadcrumb -->
+<div class="tf-breadcrumb">
+    <div class="container">
+        <div class="tf-breadcrumb-wrap">
+            <div class="tf-breadcrumb-list">
+                <a href="/" class="text text-caption-1">Home</a>
+                <i class="icon icon-arrRight"></i>
+                <a href="/cart" class="text text-caption-1">Cart</a>
+                <i class="icon icon-arrRight"></i>
+                <span class="text text-caption-1">Checkout</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /breadcrumb -->
+
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+        --cream: #F7F4EF;
+        --warm-white: #FDFCFA;
+        --charcoal: #1C1C1C;
+        --mid: #6B6560;
+        --light: #C8C0B8;
+        --accent: #8B6F47;
+        --accent-light: #D4B896;
+        --danger: #C0392B;
+        --success: #2E7D5E;
+        --border: #E4DDD5;
+        --card-bg: #FFFFFF;
+        --shadow: 0 2px 20px rgba(28,28,28,0.06);
+        --shadow-hover: 0 8px 40px rgba(28,28,28,0.12);
+    }
+
+    /* ── Layout ── */
+    .checkout-layout {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 48px 32px;
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 48px;
+        align-items: start;
+    }
+
+    .section-label {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 28px;
+        font-weight: 400;
+        color: var(--charcoal);
+        letter-spacing: 0.01em;
+        margin-bottom: 24px;
+    }
+    .section-sublabel {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--mid);
+        margin-bottom: 16px;
+    }
+
+    .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 28px;
+        margin-bottom: 24px;
+        box-shadow: var(--shadow);
+        transition: box-shadow 0.3s ease;
+    }
+    .card:hover { box-shadow: var(--shadow-hover); }
+
+    /* ── Address Cards ── */
+    .address-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+    .address-card {
+        border: 2px solid var(--border);
+        border-radius: 10px;
+        padding: 20px;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.25s ease;
+        background: var(--warm-white);
+    }
+    .address-card:hover { border-color: var(--accent-light); box-shadow: 0 4px 20px rgba(139,111,71,0.1); }
+    .address-card.selected { border-color: var(--accent); background: #FBF7F3; }
+    .address-card .default-badge {
+        position: absolute; top: 12px; right: 12px;
+        background: var(--accent); color: #fff;
+        font-size: 10px; font-weight: 500; letter-spacing: 0.08em;
+        text-transform: uppercase; padding: 3px 8px; border-radius: 20px;
+    }
+    .address-card .addr-label { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .address-card .addr-name  { font-size: 15px; font-weight: 500; color: var(--charcoal); margin-bottom: 4px; }
+    .address-card .addr-line  { font-size: 13px; color: var(--mid); line-height: 1.5; }
+    .address-card .addr-phone { font-size: 13px; color: var(--mid); margin-top: 8px; }
+    .address-radio { position: absolute; top: 16px; left: 16px; width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
+    .address-card-inner { padding-left: 28px; }
+
+    .same-address-row {
+        display: flex; align-items: center; gap: 10px;
+        padding: 16px 20px; background: #F0EBE4;
+        border-radius: 8px; margin-bottom: 16px; cursor: pointer;
+    }
+    .same-address-row input[type="checkbox"] { width: 17px; height: 17px; accent-color: var(--accent); cursor: pointer; }
+    .same-address-row label { font-size: 14px; color: var(--charcoal); cursor: pointer; font-weight: 400; }
+
+    /* ── Form ── */
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .form-group:last-child { margin-bottom: 0; }
+    label.field-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid); }
+    input[type="text"], input[type="email"], input[type="tel"],
+    input[type="password"], select, textarea {
+        width: 100%; padding: 12px 16px;
+        border: 1px solid var(--border); border-radius: 8px;
+        font-family: 'DM Sans', sans-serif; font-size: 14px;
+        color: var(--charcoal); background: var(--warm-white);
+        transition: border-color 0.2s, box-shadow 0.2s;
+        outline: none; appearance: none;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(139,111,71,0.12); }
+    textarea { resize: vertical; min-height: 80px; }
+
+    /* ── Payment ── */
+    .payment-methods { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+    .pay-option { border: 2px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color 0.2s; }
+    .pay-option.active { border-color: var(--accent); }
+    .pay-option-header { display: flex; align-items: center; gap: 14px; padding: 16px 20px; cursor: pointer; background: var(--warm-white); }
+    .pay-option-header input[type="radio"] { width: 17px; height: 17px; accent-color: var(--accent); cursor: pointer; flex-shrink: 0; }
+    .pay-option-title { font-size: 14px; font-weight: 500; color: var(--charcoal); }
+    .pay-option-icons { display: flex; gap: 8px; margin-left: auto; align-items: center; }
+    .pay-icon { background: #F0EBE4; border-radius: 4px; padding: 4px 8px; font-size: 11px; font-weight: 600; color: var(--mid); letter-spacing: 0.04em; }
+    .pay-body { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; background: #fff; }
+    .pay-body.open { max-height: 400px; padding: 20px; }
+    .card-number-wrap { position: relative; }
+    .card-number-wrap input { padding-right: 90px; letter-spacing: 0.08em; }
+    .card-chip-icons { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); display: flex; gap: 4px; align-items: center; }
+    .save-card { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 13px; color: var(--mid); }
+    .save-card input { accent-color: var(--accent); width: 15px; height: 15px; }
+
+    /* ── Sidebar ── */
+    .sidebar-sticky { position: sticky; top: 88px; }
+    .cart-item { display: flex; gap: 14px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid var(--border); }
+    .cart-item:last-child { border-bottom: none; }
+    .cart-thumb { width: 72px; height: 88px; border-radius: 8px; object-fit: cover; flex-shrink: 0; background: var(--cream); }
+    .cart-info { flex: 1; }
+    .cart-name { font-size: 14px; font-weight: 500; color: var(--charcoal); margin-bottom: 4px; line-height: 1.4; }
+    .cart-variant { font-size: 12px; color: var(--mid); margin-bottom: 8px; }
+    .cart-qty-price { display: flex; align-items: center; justify-content: space-between; }
+    .qty-badge { background: var(--cream); border: 1px solid var(--border); border-radius: 20px; padding: 3px 12px; font-size: 13px; color: var(--mid); }
+    .cart-price { font-size: 15px; font-family: 'Cormorant Garamond', serif; font-weight: 600; color: var(--charcoal); }
+
+    .summary-lines { margin-bottom: 20px; }
+    .summary-line { display: flex; justify-content: space-between; padding: 8px 0; font-size: 14px; color: var(--mid); border-bottom: 1px solid var(--border); }
+    .summary-line:last-child { border-bottom: none; }
+    .summary-line.total { font-size: 18px; font-family: 'Cormorant Garamond', serif; font-weight: 600; color: var(--charcoal); padding-top: 16px; border-top: 2px solid var(--charcoal); border-bottom: none; }
+    .summary-line .val { font-weight: 500; color: var(--charcoal); }
+    .summary-line .val.green { color: var(--success); }
+
+    .btn-place-order {
+        width: 100%; padding: 16px;
+        background: var(--charcoal); color: #fff;
+        border: none; border-radius: 10px;
+        font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
+        letter-spacing: 0.04em; cursor: pointer;
+        transition: all 0.3s ease; position: relative; overflow: hidden;
+    }
+    .btn-place-order:hover { background: var(--accent); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(139,111,71,0.35); }
+    .btn-place-order:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+    .secure-note { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 14px; font-size: 12px; color: var(--mid); }
+    .secure-note svg { width: 14px; height: 14px; }
+
+    .alert { padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 16px; display: flex; gap: 10px; align-items: center; }
+    .alert.info { background: #EEF4FF; color: #3B5BDB; border: 1px solid #BAC8FF; }
+    .alert.error { background: #FFF0F0; color: var(--danger); border: 1px solid #FFCDD2; }
+
+    /* Payment processing overlay */
+    .payment-overlay {
+        display: none;
+        position: fixed; inset: 0;
+        background: rgba(28,28,28,0.6);
+        z-index: 9999;
+        align-items: center; justify-content: center;
+        flex-direction: column; gap: 16px;
+    }
+    .payment-overlay.active { display: flex; }
+    .payment-overlay .spinner {
+        width: 48px; height: 48px;
+        border: 3px solid rgba(255,255,255,0.2);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+    }
+    .payment-overlay p { color: #fff; font-size: 15px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 1024px) { .checkout-layout { grid-template-columns: 1fr; gap: 32px; } .sidebar-sticky { position: static; } }
+    @media (max-width: 640px) { .checkout-layout { padding: 24px 16px; } .address-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .card { animation: fadeIn 0.5s ease both; }
+    .card:nth-child(2) { animation-delay: 0.1s; }
+    .card:nth-child(3) { animation-delay: 0.2s; }
+</style>
+
+<!-- Payment processing overlay -->
+<div class="payment-overlay" id="paymentOverlay">
+    <div class="spinner"></div>
+    <p id="overlayMsg">Processing your payment…</p>
+</div>
+
+<!-- Main form -->
+<form id="checkoutForm" method="POST" action="/checkout/place-order">
+
+<div class="checkout-layout">
+
+    <!-- ══════════ LEFT COLUMN ══════════ -->
+    <div class="left-col">
+
+        <!-- ── 1. Shipping Address ── -->
+        <div class="card">
+            <p class="section-sublabel">Step 01</p>
+            <h2 class="section-label">Shipping Address</h2>
+
+            <div class="alert info">
+                <svg fill="none" viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4m0 4h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Select one of your saved addresses or add a new one below.
+            </div>
+
+            <div class="address-grid" id="shipping-address-grid">
+                <% addresses.forEach(function(addr) { %>
+                <div class="address-card <%= addr.isDefault ? 'selected' : '' %>"
+                     data-id="<%= addr._id %>"
+                     onclick="selectAddress('shipping', '<%= addr._id %>', this)">
+                    <input type="radio" name="shippingAddressId" value="<%= addr._id %>"
+                           class="address-radio" <%= addr.isDefault ? 'checked' : '' %> required>
+                    <div class="address-card-inner">
+                        <% if(addr.isDefault) { %><span class="default-badge">Default</span><% } %>
+                        <div class="addr-label"><%= addr.label %></div>
+                        <div class="addr-name"><%= addr.fullName %></div>
+                        <div class="addr-line">
+                            <%= addr.line1 %><% if(addr.line2) { %>, <%= addr.line2 %><% } %><br>
+                            <% if(addr.landmark) { %><%= addr.landmark %>, <% } %>
+                            <%= addr.city %>, <%= addr.state %> – <%= addr.postalCode %><br>
+                            <%= addr.country %>
+                        </div>
+                        <div class="addr-phone">📞 <%= addr.phone %></div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+
+            <a href="/account/addresses/new?redirect=checkout"
+               style="font-size:13px;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-top:4px;">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Add New Address
+            </a>
+        </div>
+
+        <!-- ── 2. Billing Address ── -->
+        <div class="card">
+            <p class="section-sublabel">Step 02</p>
+            <h2 class="section-label">Billing Address</h2>
+
+            <div class="same-address-row" onclick="toggleSameBilling()">
+                <input type="checkbox" id="sameBilling" name="sameBilling" value="true" checked onchange="toggleSameBillingSection()">
+                <label for="sameBilling">Same as shipping address</label>
+            </div>
+
+            <div id="billing-address-section" style="display:none;">
+                <div class="address-grid" id="billing-address-grid">
+                    <% addresses.forEach(function(addr) { %>
+                    <div class="address-card"
+                         data-id="<%= addr._id %>"
+                         onclick="selectAddress('billing', '<%= addr._id %>', this)">
+                        <input type="radio" name="billingAddressId" value="<%= addr._id %>" class="address-radio">
+                        <div class="address-card-inner">
+                            <% if(addr.isDefault) { %><span class="default-badge">Default</span><% } %>
+                            <div class="addr-label"><%= addr.label %></div>
+                            <div class="addr-name"><%= addr.fullName %></div>
+                            <div class="addr-line">
+                                <%= addr.line1 %><% if(addr.line2) { %>, <%= addr.line2 %><% } %><br>
+                                <% if(addr.landmark) { %><%= addr.landmark %>, <% } %>
+                                <%= addr.city %>, <%= addr.state %> – <%= addr.postalCode %><br>
+                                <%= addr.country %>
+                            </div>
+                            <div class="addr-phone">📞 <%= addr.phone %></div>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── 3. Order Note ── -->
+        <div class="card">
+            <p class="section-sublabel">Step 03 (Optional)</p>
+            <h2 class="section-label" style="font-size:22px;">Order Note</h2>
+            <div class="form-group">
+                <label class="field-label" for="orderNote">Special instructions for your order</label>
+                <textarea id="orderNote" name="orderNote" placeholder="e.g. Please leave at the door, gift wrap, etc."></textarea>
+            </div>
+        </div>
+
+        <!-- ── 4. Payment ── -->
+        <div class="card">
+            <p class="section-sublabel">Step 04</p>
+            <h2 class="section-label">Payment Method</h2>
+
+            <div id="paymentError" class="alert error" style="display:none;">
+                <svg fill="none" viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4m0 4h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span id="paymentErrorMsg">Payment failed. Please try again.</span>
+            </div>
+
+            <div class="payment-methods" id="paymentMethods">
+
+                <!-- Credit Card -->
+                <div class="pay-option active" id="pay-card">
+                    <div class="pay-option-header" onclick="selectPayment('card')">
+                        <input type="radio" name="paymentMethod" value="card" id="pm-card" checked>
+                        <label for="pm-card" class="pay-option-title">Credit / Debit Card</label>
+                        <div class="pay-option-icons">
+                            <span class="pay-icon">VISA</span>
+                            <span class="pay-icon">MC</span>
+                            <span class="pay-icon">AMEX</span>
+                        </div>
+                    </div>
+                    <div class="pay-body open" id="body-card">
+                        <p style="font-size:13px;color:var(--mid);line-height:1.6;margin-bottom:12px;">
+                            You will be securely redirected to Razorpay to complete your card payment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- UPI -->
+                <div class="pay-option" id="pay-upi">
+                    <div class="pay-option-header" onclick="selectPayment('upi')">
+                        <input type="radio" name="paymentMethod" value="upi" id="pm-upi">
+                        <label for="pm-upi" class="pay-option-title">UPI</label>
+                        <div class="pay-option-icons">
+                            <span class="pay-icon">GPay</span>
+                            <span class="pay-icon">PhPe</span>
+                            <span class="pay-icon">BHIM</span>
+                        </div>
+                    </div>
+                    <div class="pay-body" id="body-upi">
+                        <p style="font-size:13px;color:var(--mid);line-height:1.6;">
+                            You will be prompted to enter your UPI ID or scan a QR code via Razorpay.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cash on Delivery -->
+                <div class="pay-option" id="pay-cod">
+                    <div class="pay-option-header" onclick="selectPayment('cod')">
+                        <input type="radio" name="paymentMethod" value="cod" id="pm-cod">
+                        <label for="pm-cod" class="pay-option-title">Cash on Delivery</label>
+                        <div class="pay-option-icons">
+                            <span class="pay-icon">COD</span>
+                        </div>
+                    </div>
+                    <div class="pay-body" id="body-cod">
+                        <%
+                            var codTotal    = 0;
+                            cart.items.forEach(function(it){ codTotal += (Number(it.price)||0)*(Number(it.quantity)||0); });
+                            var codAdvance  = Math.round((codTotal / 3) * 100) / 100;
+                            var codRemain   = Math.round((codTotal - codAdvance) * 100) / 100;
+                        %>
+                        <div style="background:#FFF9DB;border:1px solid #FFD43B;border-radius:8px;padding:14px 16px;margin-bottom:12px;">
+                            <div style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#E67700;margin-bottom:10px;">
+                                ⚠️ Advance Payment Required
+                            </div>
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                                <div style="background:#fff;border-radius:6px;padding:10px 14px;border:1px solid #FFD43B;">
+                                    <div style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Pay Now (1/3)</div>
+                                    <div style="font-size:18px;font-weight:600;color:#E67700;">₹<%= codAdvance.toLocaleString('en-IN') %></div>
+                                    <div style="font-size:11px;color:#888;margin-top:2px;">via Razorpay</div>
+                                </div>
+                                <div style="background:#fff;border-radius:6px;padding:10px 14px;border:1px solid #FFD43B;">
+                                    <div style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Pay on Delivery (2/3)</div>
+                                    <div style="font-size:18px;font-weight:600;color:var(--charcoal);">₹<%= codRemain.toLocaleString('en-IN') %></div>
+                                    <div style="font-size:11px;color:#888;margin-top:2px;">cash at doorstep</div>
+                                </div>
+                            </div>
+                            <p style="font-size:12px;color:#888;margin-top:10px;line-height:1.5;">
+                                To confirm your order, <strong>₹<%= codAdvance.toLocaleString('en-IN') %></strong> must be paid now as a booking advance. The remaining <strong>₹<%= codRemain.toLocaleString('en-IN') %></strong> is collected in cash upon delivery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Hidden cart data -->
+            <% var cartTotal = 0; cart.items.forEach(function(it){ cartTotal += (Number(it.price)||0) * (Number(it.quantity)||0); }); %>
+            <input type="hidden" name="cartId" value="<%= cart._id %>">
+            <input type="hidden" name="totalPrice" value="<%= cartTotal %>">
+            <% cart.items.forEach(function(item, i) { %>
+                <input type="hidden" name="items[<%= i %>][productId]" value="<%= item.productId._id || item.productId %>">
+                <input type="hidden" name="items[<%= i %>][quantity]"  value="<%= item.quantity %>">
+                <input type="hidden" name="items[<%= i %>][price]"     value="<%= item.price %>">
+            <% }) %>
+
+        </div>
+
+    </div><!-- /left-col -->
+
+    <!-- ══════════ RIGHT SIDEBAR ══════════ -->
+    <div class="sidebar-sticky">
+        <div class="card" style="padding:24px;">
+            <h2 class="section-label" style="font-size:22px;margin-bottom:20px;">Order Summary</h2>
+
+            <div class="cart-items">
+                <% cart.items.forEach(function(item) { %>
+                <div class="cart-item">
+                    <img src="<%= item.image %>" alt="<%= item.name %>" class="cart-thumb">
+                    <div class="cart-info">
+                        <div class="cart-name"><%= item.name %></div>
+                        <div class="cart-variant">SKU: <%= (item.productId._id || item.productId).toString().slice(-6).toUpperCase() %></div>
+                        <div class="cart-qty-price">
+                            <span class="qty-badge">Qty: <%= item.quantity %></span>
+                            <span class="cart-price">₹<%= (Number(item.price) * Number(item.quantity)).toLocaleString('en-IN') %></span>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+
+            <%
+                var summaryTotal = 0;
+                cart.items.forEach(function(it) {
+                    summaryTotal += (Number(it.price) || 0) * (Number(it.quantity) || 0);
+                });
+                var summaryAdvance   = Math.round((summaryTotal / 3) * 100) / 100;
+                var summaryRemaining = Math.round((summaryTotal - summaryAdvance) * 100) / 100;
+            %>
+            <div class="summary-lines">
+                <div class="summary-line">
+                    <span>Subtotal (<%= cart.items.length %> items)</span>
+                    <span class="val">₹<%= summaryTotal.toLocaleString('en-IN') %></span>
+                </div>
+                <div class="summary-line">
+                    <span>Shipping</span>
+                    <span class="val green">Free</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total</span>
+                    <span id="final-total">₹<%= summaryTotal.toLocaleString('en-IN') %></span>
+                </div>
+                <!-- COD advance breakdown — shown/hidden by JS -->
+                <div id="cod-advance-summary" style="display:none;margin-top:12px;padding:12px;background:#FFF9DB;border-radius:8px;border:1px solid #FFD43B;">
+                    <div style="display:flex;justify-content:space-between;font-size:13px;padding:4px 0;color:var(--mid);">
+                        <span>Pay Now (advance 1/3)</span>
+                        <strong style="color:#E67700;">₹<%= summaryAdvance.toLocaleString('en-IN') %></strong>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;font-size:13px;padding:4px 0;color:var(--mid);">
+                        <span>Pay on Delivery (2/3)</span>
+                        <strong>₹<%= summaryRemaining.toLocaleString('en-IN') %></strong>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-place-order" id="placeOrderBtn">
+                Place Order →
+            </button>
+            <div class="secure-note">
+                <svg fill="none" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Secure 256-bit SSL encrypted checkout
+            </div>
+        </div>
+    </div>
+
+</div>
+</form>
+
+<script>
+// ── CSRF token (if you use csurf middleware) ──────────────────────────────────
+// const CSRF_TOKEN = '<%= typeof csrfToken !== "undefined" ? csrfToken : "" %>';
+
+// ── Address selection ─────────────────────────────────────────────────────────
+function selectAddress(type, id, el) {
+    const grid = document.getElementById(type + '-address-grid');
+    grid.querySelectorAll('.address-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    el.querySelector('input[type="radio"]').checked = true;
+}
+
+// ── Billing same as shipping ──────────────────────────────────────────────────
+function toggleSameBilling() {
+    setTimeout(() => toggleSameBillingSection(), 0);
+}
+function toggleSameBillingSection() {
+    const cb  = document.getElementById('sameBilling');
+    const sec = document.getElementById('billing-address-section');
+    const radios = sec.querySelectorAll('input[type="radio"]');
+    if (cb.checked) {
+        sec.style.display = 'none';
+        radios.forEach(r => r.removeAttribute('required'));
+    } else {
+        sec.style.display = 'block';
+        radios.forEach(r => r.setAttribute('required', ''));
+        const first = sec.querySelector('.address-card');
+        if (first && !sec.querySelector('.address-card.selected')) {
+            first.classList.add('selected');
+            first.querySelector('input[type="radio"]').checked = true;
+        }
+    }
+}
+toggleSameBillingSection();
+
+// ── Payment method toggle ─────────────────────────────────────────────────────
+function selectPayment(method) {
+    ['card', 'upi', 'cod'].forEach(m => {
+        document.getElementById('pay-' + m).classList.toggle('active', m === method);
+        document.getElementById('body-' + m).classList.toggle('open', m === method);
+        document.getElementById('pm-' + m).checked = (m === method);
+    });
+
+    // Toggle COD advance breakdown in order summary
+    const codSummary = document.getElementById('cod-advance-summary');
+    const btn        = document.getElementById('placeOrderBtn');
+    if (method === 'cod') {
+        codSummary.style.display = 'block';
+        const advAmt = codSummary.querySelector('strong').textContent;
+        btn.textContent = `Pay ${advAmt} Advance & Place Order →`;
+    } else {
+        codSummary.style.display = 'none';
+        btn.textContent = 'Place Order →';
+    }
+}
+
+// ── Overlay helpers ───────────────────────────────────────────────────────────
+function showOverlay(msg) {
+    document.getElementById('overlayMsg').textContent = msg || 'Processing…';
+    document.getElementById('paymentOverlay').classList.add('active');
+}
+function hideOverlay() {
+    document.getElementById('paymentOverlay').classList.remove('active');
+}
+function showPaymentError(msg) {
+    const el = document.getElementById('paymentError');
+    document.getElementById('paymentErrorMsg').textContent = msg;
+    el.style.display = 'flex';
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// ── POST helper (JSON) ────────────────────────────────────────────────────────
+async function postJSON(url, data) {
+    const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+        credentials: 'same-origin',
+    });
+    return res.json();
+}
+
+// ── Main form submit ──────────────────────────────────────────────────────────
+document.getElementById('checkoutForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Client-side validation
+    const shippingPicked = document.querySelector('input[name="shippingAddressId"]:checked');
+    if (!shippingPicked) { alert('Please select a shipping address.'); return; }
+
+    const sameBilling = document.getElementById('sameBilling').checked;
+    if (!sameBilling) {
+        const billingPicked = document.querySelector('input[name="billingAddressId"]:checked');
+        if (!billingPicked) { alert('Please select a billing address.'); return; }
+    }
+
+    const btn = document.getElementById('placeOrderBtn');
+    btn.disabled = true;
+    btn.textContent = 'Please wait…';
+    document.getElementById('paymentError').style.display = 'none';
+
+    // Collect form data
+    const formData = new FormData(this);
+    const payload  = Object.fromEntries(formData.entries());
+
+    // Fix billing address if same
+    if (sameBilling) payload.billingAddressId = payload.shippingAddressId;
+
+    // Re-build items array from hidden inputs
+    const itemsArr = [];
+    let i = 0;
+    while (formData.get(`items[${i}][productId]`)) {
+        itemsArr.push({
+            productId: formData.get(`items[${i}][productId]`),
+            quantity:  formData.get(`items[${i}][quantity]`),
+            price:     formData.get(`items[${i}][price]`),
+        });
+        i++;
+    }
+    payload.items = itemsArr;
+
+    const method = payload.paymentMethod;
+
+    // ─── All methods now go through Razorpay (COD pays 1/3 advance) ────────────
+    showOverlay(method === 'cod' ? 'Setting up advance payment…' : 'Initiating payment…');
+
+    let initData;
+    try {
+        const res = await fetch('/checkout/place-order', {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+            body:    JSON.stringify(payload),
+            credentials: 'same-origin',
+        });
+        initData = await res.json();
+    } catch (err) {
+        hideOverlay();
+        btn.disabled = false; btn.textContent = 'Place Order →';
+        showPaymentError('Network error. Please try again.');
+        return;
+    }
+
+    if (!initData.success) {
+        hideOverlay();
+        btn.disabled = false; btn.textContent = 'Place Order →';
+        showPaymentError(initData.error || 'Could not initiate payment.');
+        return;
+    }
+
+    hideOverlay();
+
+    // Build Razorpay description based on method
+    const rzpDescription = initData.isCodAdvance
+        ? `Advance Payment (1/3) — ₹${initData.codAdvanceAmount.toLocaleString('en-IN')} of ₹${initData.totalAmount.toLocaleString('en-IN')}`
+        : 'Order Payment';
+
+    // ─── Open Razorpay checkout modal ───────────────────────────────────────
+    const rzpOptions = {
+        key:         initData.keyId,
+        amount:      initData.amount,
+        currency:    initData.currency,
+        order_id:    initData.razorpayOrderId,
+        name:        'Curve & Comfort',
+        description: rzpDescription,
+        prefill: {
+            name:    initData.prefill.name,
+            email:   initData.prefill.email,
+            contact: initData.prefill.contact,
+        },
+        theme: { color: '#8B6F47' },
+        notes: {
+            payment_type: initData.isCodAdvance ? 'cod_advance' : method,
+        },
+
+        // Restrict payment methods based on selection
+        ...(method === 'upi'  ? { method: { upi: true,  card: false, netbanking: false, wallet: false } } : {}),
+        ...(method === 'card' ? { method: { card: true,  upi: false, netbanking: false, wallet: false } } : {}),
+        // COD advance: allow all online methods so user can choose how to pay the 1/3
+
+        handler: async function(response) {
+            showOverlay('Verifying payment…');
+            try {
+                const verifyRes = await postJSON('/checkout/verify-payment', {
+                    razorpay_order_id:   response.razorpay_order_id,
+                    razorpay_payment_id: response.razorpay_payment_id,
+                    razorpay_signature:  response.razorpay_signature,
+                });
+
+                if (verifyRes.success) {
+                    showOverlay(initData.isCodAdvance
+                        ? 'Advance paid! Order confirmed. Redirecting…'
+                        : 'Payment confirmed! Redirecting…'
+                    );
+                    window.location.href = `/orders/${verifyRes.orderId}`;
+                } else {
+                    hideOverlay();
+                    btn.disabled = false;
+                    btn.textContent = method === 'cod'
+                        ? `Pay ₹${initData.codAdvanceAmount.toLocaleString('en-IN')} Advance & Place Order →`
+                        : 'Place Order →';
+                    showPaymentError(verifyRes.error || 'Payment verification failed. Contact support.');
+                }
+            } catch (err) {
+                hideOverlay();
+                btn.disabled = false; btn.textContent = 'Place Order →';
+                showPaymentError('Verification error. Save this ID: ' + response.razorpay_payment_id);
+            }
+        },
+
+        modal: {
+            ondismiss: async function() {
+                await postJSON('/checkout/payment-failed', {});
+                btn.disabled = false;
+                btn.textContent = method === 'cod'
+                    ? `Pay ₹${initData.codAdvanceAmount?.toLocaleString('en-IN')} Advance & Place Order →`
+                    : 'Place Order →';
+            }
+        }
+    };
+
+    const rzp = new Razorpay(rzpOptions);
+
+    rzp.on('payment.failed', async function(response) {
+        hideOverlay();
+        await postJSON('/checkout/payment-failed', { error: response.error });
+        btn.disabled = false;
+        btn.textContent = method === 'cod'
+            ? `Pay ₹${initData.codAdvanceAmount?.toLocaleString('en-IN')} Advance & Place Order →`
+            : 'Place Order →';
+        showPaymentError(response.error.description || 'Payment failed. Please try again.');
+    });
+
+    rzp.open();
+});
+</script>

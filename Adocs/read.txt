@@ -59,3 +59,40 @@
           <button class="btn btn--danger" type="submit">Logout from all devices</button>
         </form>
 </section>
+
+
+<!-- tf-has-purchased -->
+<div class="tf-has-purchased d-none d-lg-block">
+    <i class="icon icon-close tf-has-purchased-close"></i>
+    <div class="tf-has-purchased-product">
+        <div class="image">
+            <img class="lazyload" data-src="images/products/womens/women-3.jpg" alt=""
+                src="images/products/womens/women-3.jpg">
+        </div>
+        <div class="content flex-grow-1">
+            <p class="text-caption-1 mb_4">John Smith has purchased!</p>
+            <a class="link text-title mb_12" href="product-detail.html">Ribbed cotton-blend top</a>
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="d-flex align-items-center gap-4">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_15839_21584)">
+                            <path
+                                d="M6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11Z"
+                                stroke="#A0A0A0" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6 3V6L8 7" stroke="#A0A0A0" stroke-width="0.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_15839_21584">
+                                <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <p class="text-caption-1 text-secondary-2">12 mins ago</p>
+                </div>
+                <a href="product-detail.html" class="text-caption-1 fw-6 line-under link">View Products</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /tf-has-purchased -->

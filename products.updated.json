@@ -1,0 +1,3175 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Caden Retro Cream Sofa",
+      "description": "A retro-inspired cream sofa with clean lines and comfortable, modern cushioning.",
+      "price": 42000,
+      "oldPrice": 50000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_A1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_A2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_A3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_A4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_A5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_A6.jpg"
+      ],
+      "category": "Sofas",
+      "subcategory": [
+        "Sofa",
+        "Living Room"
+      ],
+      "brand": "Louis Vuitton",
+      "attributes": {
+        "color": "Pink",
+        "roomType": "Living Room",
+        "style": "Retro",
+        "sizes": "3-seater",
+        "material": "Wood"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Louis Vuitton",
+          "Hermes"
+        ],
+        "colors": [
+          "Pink",
+          "Orange"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": [
+        "bestseller"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Round Upholstered Loveseat",
+      "description": "A compact, round loveseat designed for cozy seating and visual appeal.",
+      "price": 38000,
+      "oldPrice": 58000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_B.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_B1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_B2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_B3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_B4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_B5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_B6.jpg"
+      ],
+      "category": "Sofas",
+      "subcategory": [
+        "2 Seater Sofa",
+        "Living Room"
+      ],
+      "brand": "Louis Vuitton",
+      "attributes": {
+        "color": "Beige",
+        "seatingCapacity": "2 Seater",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Louis Vuitton",
+          "Gucci"
+        ],
+        "colors": [
+          "Beige",
+          "Cream"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "trending"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The Circular Comfort Sofa",
+      "description": "A sculptural circular sofa offering plush comfort and contemporary style.",
+      "price": 41000,
+      "oldPrice": 51000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_C.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_C1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_C2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_C3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_C4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_C5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_C6.jpg"
+      ],
+      "category": "Sofas",
+      "subcategory": [
+        "Sofa",
+        "Living Room"
+      ],
+      "brand": "Hermes",
+      "attributes": {
+        "color": "White",
+        "roomType": "Living Room",
+        "style": "Contemporary"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Hermes",
+          "Prada"
+        ],
+        "colors": [
+          "White",
+          "Gray"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": [
+        "bestseller"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Luna 2 Seater sofa",
+      "description": "A compact two-seater sofa crafted for modern living spaces and everyday comfort.",
+      "price": 47000,
+      "oldPrice": 50000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_D.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_D1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_D2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_D3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_D4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_D5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_D6.jpg"
+      ],
+      "category": "Sofas",
+      "subcategory": [
+        "2 Seater Sofa",
+        "Living Room"
+      ],
+      "brand": "Louis Vuitton",
+      "attributes": {
+        "color": "Navy",
+        "seatingCapacity": "2 Seater",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Louis Vuitton",
+          "Chanel"
+        ],
+        "colors": [
+          "Navy",
+          "Blue"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 5,
+      "title": "Right / Left Hand Chaise Lounge Sofa",
+      "description": "A versatile chaise lounge sofa available in right or left configurations for relaxed seating.",
+      "price": 48200,
+      "oldPrice": 55000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_E.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_E1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_E2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_E3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_E4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_E5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_E6.jpg"
+      ],
+      "category": "Sofas",
+      "subcategory": [
+        "Chaise Lounge Sofa",
+        "Living Room"
+      ],
+      "brand": "Hermes",
+      "attributes": {
+        "color": "Brown",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Hermes",
+          "Gucci"
+        ],
+        "colors": [
+          "Brown",
+          "Tan"
+        ],
+        "sizes": [
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": [
+        "trending"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Muse 3 Seater Sofa",
+      "description": "A spacious three-seater sofa combining refined design with superior comfort.",
+      "price": 55000,
+      "oldPrice": 60000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_F1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_F2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_F3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_F4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_F5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_F.jpg"
+      ],
+      "category": "Sofas",
+      "subcategory": [
+        "3 Seater Sofa",
+        "Living Room"
+      ],
+      "brand": "Louis Vuitton",
+      "attributes": {
+        "color": "Green",
+        "seatingCapacity": "3 Seater",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Louis Vuitton",
+          "Prada"
+        ],
+        "colors": [
+          "Green",
+          "Olive"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "bestseller"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Candelaria Contemporary Sofa",
+      "description": "A sleek contemporary sofa with clean lines and a modern aesthetic.",
+      "price": 34000,
+      "oldPrice": 40000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_G.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_G1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_G2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_G3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_G4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_G5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_G6.jpg"
+      ],
+      "category": "Sofas",
+      "subcategory": [
+        "Sofa",
+        "Living Room"
+      ],
+      "brand": "Chanel",
+      "attributes": {
+        "color": "Black",
+        "roomType": "Living Room",
+        "style": "Contemporary"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Chanel",
+          "Dior"
+        ],
+        "colors": [
+          "Black",
+          "Charcoal"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": [
+        "trending"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Mor Décor Andrea Sofa",
+      "description": "A stylish sofa with premium upholstery and a refined, elegant presence.",
+      "price": 46000,
+      "oldPrice": 59000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_H.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_H1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_H2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_H3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_H4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_H5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_H6.jpg"
+      ],
+      "category": "Sofas",
+      "subcategory": [
+        "Sofa",
+        "Living Room"
+      ],
+      "brand": "Hermes",
+      "attributes": {
+        "color": "Burgundy",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Hermes",
+          "Burberry"
+        ],
+        "colors": [
+          "Burgundy",
+          "Red"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 9,
+      "title": "Fior 3 Seater Sofa with Vertical Tufting",
+      "description": "A three-seater sofa featuring vertical tufting for a sophisticated look.",
+      "price": 58000,
+      "oldPrice": 60000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_I.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_I1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_I2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_I3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_I4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_I5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_I6.jpg"
+      ],
+      "category": "Sofas",
+      "subcategory": [
+        "3 Seater Sofa",
+        "Living Room"
+      ],
+      "brand": "Louis Vuitton",
+      "attributes": {
+        "color": "Emerald",
+        "seatingCapacity": "3 Seater",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Louis Vuitton",
+          "Versace"
+        ],
+        "colors": [
+          "Emerald",
+          "Teal"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": [
+        "bestseller"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Mufti Compacto Sofa with Solid Wood Frame",
+      "description": "A compact sofa built on a solid wood frame with classic tufted detailing.",
+      "price": 57000,
+      "oldPrice": 65000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_J.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_J1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_J2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_J3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_J4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_J5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/sofa_J6.jpg"
+      ],
+      "category": "Sofas",
+      "subcategory": [
+        "Sofa",
+        "Living Room"
+      ],
+      "brand": "Gucci",
+      "attributes": {
+        "color": "Mustard",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Gucci",
+          "Prada"
+        ],
+        "colors": [
+          "Mustard",
+          "Yellow"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 11,
+      "title": "The Shadow Coffee Table",
+      "description": "A bold, minimal centerpiece that adds depth and quiet sophistication to modern living spaces.",
+      "price": 31742,
+      "oldPrice": 38914,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_A.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_A1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_A2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_A3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_A4.jpg"
+      ],
+      "category": "Coffee Tables",
+      "subcategory": [
+        "Coffee Table",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Black",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "CB2"
+        ],
+        "colors": [
+          "Black",
+          "Gray"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": [
+        "trending"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "The Marble Bloom coffee table",
+      "description": "An elegant, stone-inspired table with sculptural curves and timeless appeal.",
+      "price": 34589,
+      "oldPrice": 41263,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_B.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_B1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_B2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_B3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_B4.jpg"
+      ],
+      "category": "Coffee Tables",
+      "subcategory": [
+        "Coffee Table",
+        "Living Room"
+      ],
+      "brand": "Restoration Hardware",
+      "attributes": {
+        "color": "White",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Restoration Hardware",
+          "Pottery Barn"
+        ],
+        "colors": [
+          "White",
+          "Marble"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "bestseller"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "The Contour coffee table",
+      "description": "Smooth, flowing lines create a refined statement for contemporary interiors.",
+      "price": 36105,
+      "oldPrice": 44887,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_C.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_C1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_C2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_C3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_C4.jpg"
+      ],
+      "category": "Coffee Tables",
+      "subcategory": [
+        "Coffee Table",
+        "Living Room"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Walnut",
+        "roomType": "Living Room",
+        "style": "Contemporary"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "West Elm"
+        ],
+        "colors": [
+          "Walnut",
+          "Brown"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 14,
+      "title": "The Orbit coffee table",
+      "description": "Rounded geometry and balanced proportions inspired by celestial motion.",
+      "price": 38964,
+      "oldPrice": 47102,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_D.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_D1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_D2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_D3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_D4.jpg"
+      ],
+      "category": "Coffee Tables",
+      "subcategory": [
+        "Coffee Table",
+        "Living Room"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Oak",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Crate & Barrel"
+        ],
+        "colors": [
+          "Oak",
+          "Natural"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "trending"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "The Sienna coffee table",
+      "description": "Warm, earthy tones paired with a clean, modern silhouette.",
+      "price": 40217,
+      "oldPrice": 48936,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_E.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_E1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_E2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_E3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_E4.jpg"
+      ],
+      "category": "Coffee Tables",
+      "subcategory": [
+        "Coffee Table",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Terracotta",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Room & Board"
+        ],
+        "colors": [
+          "Terracotta",
+          "Orange"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 16,
+      "title": "The Pebble Coffee Table",
+      "description": "Soft, organic forms inspired by naturally weathered stones.",
+      "price": 42880,
+      "oldPrice": 50941,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_F.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_F1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_F2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_F3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_F4.jpg"
+      ],
+      "category": "Coffee Tables",
+      "subcategory": [
+        "Coffee Table",
+        "Living Room"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Concrete",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "Blu Dot"
+        ],
+        "colors": [
+          "Concrete",
+          "Gray"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "bestseller"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "The Interlock coffee table",
+      "description": "Intersecting elements designed for visual depth and modern sophistication.",
+      "price": 45136,
+      "oldPrice": 53784,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_G.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_G1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_G2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_G3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_G4.jpg"
+      ],
+      "category": "Coffee Tables",
+      "subcategory": [
+        "Coffee Table",
+        "Living Room"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Black",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Black",
+          "Metal"
+        ],
+        "sizes": [
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 18,
+      "title": "The Interlock coffee table 2",
+      "description": "Intersecting elements designed for visual depth and modern sophistication.",
+      "price": 46902,
+      "oldPrice": 55611,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_H.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_H1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_H2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_H3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_H4.jpg"
+      ],
+      "category": "Coffee Tables",
+      "subcategory": [
+        "Coffee Table",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Brass",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Crate & Barrel"
+        ],
+        "colors": [
+          "Brass",
+          "Gold"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "trending"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "The Dune Coffee Table",
+      "description": "Flowing curves inspired by shifting sands for a sculptural, modern look.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_I.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_I1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_I2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_I3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_I4.jpg"
+      ],
+      "category": "Coffee Tables",
+      "subcategory": [
+        "Coffee Table",
+        "Living Room"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Sand",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "Anthropologie"
+        ],
+        "colors": [
+          "Sand",
+          "Beige"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 20,
+      "title": "Ivory Noir Coffee Tables",
+      "description": "A refined contrast of light and dark tones with timeless elegance.",
+      "price": 49621,
+      "oldPrice": 58437,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_J.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_J1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_J2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_J3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/coffeeTable_J4.jpg"
+      ],
+      "category": "Coffee Tables",
+      "subcategory": [
+        "Coffee Table",
+        "Living Room"
+      ],
+      "brand": "Restoration Hardware",
+      "attributes": {
+        "color": "White",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Restoration Hardware",
+          "Room & Board"
+        ],
+        "colors": [
+          "White",
+          "Black"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "bestseller"
+      ]
+    },
+    {
+      "id": 21,
+      "title": "The Sora Console",
+      "description": "A refined veneer console paired with elegant brass legs, offering a sleek and contemporary profile.",
+      "price": 42000,
+      "oldPrice": 50000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_A1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_A.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_A2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_A3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_A4.jpg"
+      ],
+      "category": "Console Tables",
+      "subcategory": [
+        "Console Table",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Walnut",
+        "roomType": "Living Room",
+        "style": "Contemporary"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "CB2"
+        ],
+        "colors": [
+          "Walnut",
+          "Brass"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 22,
+      "title": "The Oppulence console",
+      "description": "A statement console featuring a veneer surface with laminate-finish doors for functional elegance.",
+      "price": 38000,
+      "oldPrice": 58000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_B.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_B1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_B2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_B3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_B4.jpg"
+      ],
+      "category": "Console Tables",
+      "subcategory": [
+        "Console Table",
+        "Living Room"
+      ],
+      "brand": "Pottery Barn",
+      "attributes": {
+        "color": "Black",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Pottery Barn",
+          "Crate & Barrel"
+        ],
+        "colors": [
+          "Black",
+          "White"
+        ],
+        "sizes": [
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 23,
+      "title": "The Horizon console",
+      "description": "A low-profile console combining a laminate top with veneer legs for a balanced modern look.",
+      "price": 41000,
+      "oldPrice": 51000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_C.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_C1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_C2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_C3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_C4.jpg"
+      ],
+      "category": "Console Tables",
+      "subcategory": [
+        "Console Table",
+        "Living Room"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Oak",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "West Elm"
+        ],
+        "colors": [
+          "Oak",
+          "Natural"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": [
+        "trending"
+      ]
+    },
+    {
+      "id": 24,
+      "title": "The Elaris console",
+      "description": "A spacious laminate-finish console accented with brass legs for a bold yet sophisticated presence.",
+      "price": 47000,
+      "oldPrice": 50000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_D.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_D1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_D2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_D3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_D4.jpg"
+      ],
+      "category": "Console Tables",
+      "subcategory": [
+        "Console Table",
+        "Living Room"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Gray",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Room & Board"
+        ],
+        "colors": [
+          "Gray",
+          "Gold"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 25,
+      "title": "The Serene console",
+      "description": "A spacious laminate-finish console accented with brass legs for a bold yet sophisticated presence.",
+      "price": 48200,
+      "oldPrice": 55000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_E.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_E1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_E2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_E3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_E4.jpg"
+      ],
+      "category": "Console Tables",
+      "subcategory": [
+        "Console Table",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "White",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "White",
+          "Silver"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 26,
+      "title": "The Gallery console",
+      "description": "A classic veneer console enhanced with ducco polish for a clean, gallery-inspired aesthetic.",
+      "price": 55000,
+      "oldPrice": 60000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_F.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_F1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_F2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_F3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_F4.jpg"
+      ],
+      "category": "Console Tables",
+      "subcategory": [
+        "Console Table",
+        "Living Room"
+      ],
+      "brand": "Restoration Hardware",
+      "attributes": {
+        "color": "Espresso",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Restoration Hardware",
+          "Pottery Barn"
+        ],
+        "colors": [
+          "Espresso",
+          "Brown"
+        ],
+        "sizes": [
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "bestseller"
+      ]
+    },
+    {
+      "id": 27,
+      "title": "The Terra console",
+      "description": "A compact veneer-finish console with a minimalist form and grounded proportions.",
+      "price": 34000,
+      "oldPrice": 40000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_G.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_G1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_G2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_G3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_G4.jpg"
+      ],
+      "category": "Console Tables",
+      "subcategory": [
+        "Console Table",
+        "Living Room"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Ash",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "CB2"
+        ],
+        "colors": [
+          "Ash",
+          "Light Gray"
+        ],
+        "sizes": [
+          "S",
+          "M"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 28,
+      "title": "The Espresso Console",
+      "description": "A veneer-finish console with brass legs, blending richness and modern structure.",
+      "price": 46000,
+      "oldPrice": 59000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_H.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_H1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_H2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_H3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/consoleTable_H4.jpg"
+      ],
+      "category": "Console Tables",
+      "subcategory": [
+        "Console Table",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Dark Brown",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Crate & Barrel"
+        ],
+        "colors": [
+          "Dark Brown",
+          "Brass"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 31,
+      "title": "The Marquis Nester table",
+      "description": "A compact, versatile accent table designed for flexible placement and everyday utility.",
+      "price": 31742,
+      "oldPrice": 38914,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_A.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_A1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_A2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_A3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_A4.jpg"
+      ],
+      "category": "Nester Tables",
+      "subcategory": [
+        "Nesting Table",
+        "Living Room"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Gold",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "West Elm"
+        ],
+        "colors": [
+          "Gold",
+          "Marble"
+        ],
+        "sizes": [
+          "S",
+          "M"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": [
+        "trending"
+      ]
+    },
+    {
+      "id": 32,
+      "title": "The Haven Round Nester Table",
+      "description": "A compact, versatile accent table designed for flexible placement and everyday utility.",
+      "price": 34589,
+      "oldPrice": 41263,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_B.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_B1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_B2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_B3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_B4.jpg"
+      ],
+      "category": "Nester Tables",
+      "subcategory": [
+        "Nesting Table",
+        "Living Room"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Black",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Pottery Barn"
+        ],
+        "colors": [
+          "Black",
+          "Glass"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 33,
+      "title": "The Pedestal Nester Table",
+      "description": "A compact, versatile accent table designed for flexible placement and everyday utility.",
+      "price": 36105,
+      "oldPrice": 44887,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_C.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_C1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_C2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_C3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_C4.jpg"
+      ],
+      "category": "Nester Tables",
+      "subcategory": [
+        "Nesting Table",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "White",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Room & Board"
+        ],
+        "colors": [
+          "White",
+          "Chrome"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 34,
+      "title": "The Offset Nester Table",
+      "description": "A compact, versatile accent table designed for flexible placement and everyday utility.",
+      "price": 38964,
+      "oldPrice": 47102,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_D.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_D1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_D2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_D3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_D4.jpg"
+      ],
+      "category": "Nester Tables",
+      "subcategory": [
+        "Nesting Table",
+        "Living Room"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Oak",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "Blu Dot"
+        ],
+        "colors": [
+          "Oak",
+          "Natural"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 35,
+      "title": "The Nook Nester table",
+      "description": "A compact, versatile accent table designed for flexible placement and everyday utility.",
+      "price": 40217,
+      "oldPrice": 48936,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_E.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_E1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_E2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_E3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_E4.jpg"
+      ],
+      "category": "Nester Tables",
+      "subcategory": [
+        "Nesting Table",
+        "Living Room"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Walnut",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Walnut",
+          "Copper"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 36,
+      "title": "The Couch Clip Nester table",
+      "description": "A compact, versatile accent table designed for flexible placement and everyday utility.",
+      "price": 42880,
+      "oldPrice": 50941,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_F.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_F1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_F2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_F3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_F4.jpg"
+      ],
+      "category": "Nester Tables",
+      "subcategory": [
+        "Nesting Table",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Gray",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Crate & Barrel"
+        ],
+        "colors": [
+          "Gray",
+          "Metal"
+        ],
+        "sizes": [
+          "S",
+          "M"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "bestseller"
+      ]
+    },
+    {
+      "id": 37,
+      "title": "The Effortless Nester Table",
+      "description": "A compact, versatile accent table designed for flexible placement and everyday utility.",
+      "price": 45136,
+      "oldPrice": 53784,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_G.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_G1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_G2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_G3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_G4.jpg"
+      ],
+      "category": "Nester Tables",
+      "subcategory": [
+        "Nesting Table",
+        "Living Room"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Brass",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "Anthropologie"
+        ],
+        "colors": [
+          "Brass",
+          "Smoke Glass"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 38,
+      "title": "The Silhouette Nester Table",
+      "description": "A compact, versatile accent table designed for flexible placement and everyday utility.",
+      "price": 46902,
+      "oldPrice": 55611,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_H.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_H1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_H2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_H3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_H4.jpg"
+      ],
+      "category": "Nester Tables",
+      "subcategory": [
+        "Nesting Table",
+        "Living Room"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Black",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Room & Board"
+        ],
+        "colors": [
+          "Black",
+          "Gold"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 39,
+      "title": "The Hourglass Nester Table",
+      "description": "A compact, versatile accent table designed for flexible placement and everyday utility.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_I.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_I1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_I2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_I3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_I4.jpg"
+      ],
+      "category": "Nester Tables",
+      "subcategory": [
+        "Nesting Table",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Concrete",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Pottery Barn"
+        ],
+        "colors": [
+          "Concrete",
+          "Steel"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 40,
+      "title": "The Monolith Nester Table",
+      "description": "A compact, versatile accent table designed for flexible placement and everyday utility.",
+      "price": 49621,
+      "oldPrice": 58437,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_J.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_J1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_J2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_J3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/nestertable_J4.jpg"
+      ],
+      "category": "Nester Tables",
+      "subcategory": [
+        "Nesting Table",
+        "Living Room"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Stone",
+        "roomType": "Living Room"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Stone",
+          "Granite"
+        ],
+        "sizes": [
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 41,
+      "title": "Amberis Ottoman",
+      "description": "A comfortable and functional ottoman designed to complement modern seating spaces.",
+      "price": 42000,
+      "oldPrice": 50000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_A.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_A1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_A2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_A3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_A4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_A5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_A6.jpg"
+      ],
+      "category": "Chairs & Ottomans",
+      "subcategory": [
+        "Ottoman",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Amber",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Pottery Barn"
+        ],
+        "colors": [
+          "Amber",
+          "Orange"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 43,
+      "title": "Serenova Chair",
+      "description": "A thoughtfully designed seating piece balancing comfort, form, and modern aesthetics.",
+      "price": 41000,
+      "oldPrice": 51000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_C.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_C1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_C2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_C3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_C4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_C5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_C6.jpg"
+      ],
+      "category": "Chairs & Ottomans",
+      "subcategory": [
+        "Chair",
+        "Living Room"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Cream",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Article"
+        ],
+        "colors": [
+          "Cream",
+          "Beige"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 44,
+      "title": "The Eloise Armchair / The Taj Silhouette Armchair",
+      "description": "A thoughtfully designed seating piece balancing comfort, form, and modern aesthetics.",
+      "price": 47000,
+      "oldPrice": 50000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_D.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_D1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_D2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_D3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_D4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_D5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_D6.jpg"
+      ],
+      "category": "Chairs & Ottomans",
+      "subcategory": [
+        "Armchair",
+        "Living Room"
+      ],
+      "brand": "Restoration Hardware",
+      "attributes": {
+        "color": "Teal",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Restoration Hardware",
+          "Anthropologie"
+        ],
+        "colors": [
+          "Teal",
+          "Blue"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": [
+        "trending"
+      ]
+    },
+    {
+      "id": 45,
+      "title": "The Aurelius Armchair",
+      "description": "A thoughtfully designed seating piece balancing comfort, form, and modern aesthetics.",
+      "price": 48200,
+      "oldPrice": 55000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_E.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_E1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_E2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_E3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_E4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_E5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_E6.jpg"
+      ],
+      "category": "Chairs & Ottomans",
+      "subcategory": [
+        "Armchair",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Charcoal",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Room & Board"
+        ],
+        "colors": [
+          "Charcoal",
+          "Gray"
+        ],
+        "sizes": [
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 46,
+      "title": "The Zaffran Chair",
+      "description": "A thoughtfully designed seating piece balancing comfort, form, and modern aesthetics.",
+      "price": 55000,
+      "oldPrice": 60000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_F.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_F1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_F2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_F3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_F4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_F5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_F6.jpg"
+      ],
+      "category": "Chairs & Ottomans",
+      "subcategory": [
+        "Chair",
+        "Living Room"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Saffron",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "CB2"
+        ],
+        "colors": [
+          "Saffron",
+          "Yellow"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 47,
+      "title": "The Kairo Lounge",
+      "description": "A thoughtfully designed seating piece balancing comfort, form, and modern aesthetics.",
+      "price": 34000,
+      "oldPrice": 40000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_G.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_G1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_G2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_G3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_G4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_G5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_G6.jpg"
+      ],
+      "category": "Chairs & Ottomans",
+      "subcategory": [
+        "Lounge Chair",
+        "Living Room"
+      ],
+      "brand": "Pottery Barn",
+      "attributes": {
+        "color": "Tan",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Pottery Barn",
+          "Crate & Barrel"
+        ],
+        "colors": [
+          "Tan",
+          "Brown"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 48,
+      "title": "The Nova Chair",
+      "description": "A thoughtfully designed seating piece balancing comfort, form, and modern aesthetics.",
+      "price": 46000,
+      "oldPrice": 59000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_H.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_H1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_H2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_H3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_H4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_H5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_H6.jpg"
+      ],
+      "category": "Chairs & Ottomans",
+      "subcategory": [
+        "Chair",
+        "Living Room"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Navy",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Navy",
+          "Velvet"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 49,
+      "title": "The Cucoon Lounge Chair",
+      "description": "A thoughtfully designed seating piece balancing comfort, form, and modern aesthetics.",
+      "price": 58000,
+      "oldPrice": 60000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_I.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_I1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_I2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_I3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_I4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_I5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_I6.jpg"
+      ],
+      "category": "Chairs & Ottomans",
+      "subcategory": [
+        "Lounge Chair",
+        "Living Room"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "White",
+        "roomType": "Living Room",
+        "style": "Modern"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "Blu Dot"
+        ],
+        "colors": [
+          "White",
+          "Ivory"
+        ],
+        "sizes": [
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "bestseller"
+      ]
+    },
+    {
+      "id": 50,
+      "title": "The Asymmetric wall decor",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 57000,
+      "oldPrice": 65000,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_J1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_J2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_J.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_J5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/ottoman_J6.jpg"
+      ],
+      "category": "Wall Decor",
+      "subcategory": [
+        "Wall Decor",
+        "Home Decor"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Wood",
+        "roomType": "Home Decor"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "West Elm"
+        ],
+        "colors": [
+          "Wood",
+          "Natural"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 51,
+      "title": "The Serenity Wall decor",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 31742,
+      "oldPrice": 38914,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_B1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_B2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_B3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_B.jpg"
+      ],
+      "category": "Wall Decor",
+      "subcategory": [
+        "Wall Decor",
+        "Home Decor"
+      ],
+      "brand": "Anthropologie",
+      "attributes": {
+        "color": "White",
+        "roomType": "Home Decor"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Anthropologie",
+          "Urban Outfitters"
+        ],
+        "colors": [
+          "White",
+          "Ceramic"
+        ],
+        "sizes": [
+          "S",
+          "M"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 52,
+      "title": "The Luna Wall decor",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 34589,
+      "oldPrice": 41263,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_C1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_C2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_C3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_C.jpg"
+      ],
+      "category": "Wall Decor",
+      "subcategory": [
+        "Wall Decor",
+        "Home Decor"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Silver",
+        "roomType": "Home Decor"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Pottery Barn"
+        ],
+        "colors": [
+          "Silver",
+          "Metal"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 53,
+      "title": "Cascading Wooden Wall decor",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 36105,
+      "oldPrice": 44887,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_D1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_D2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_D3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_D.jpg"
+      ],
+      "category": "Wall Decor",
+      "subcategory": [
+        "Wall Decor",
+        "Home Decor"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Oak",
+        "roomType": "Home Decor"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "CB2"
+        ],
+        "colors": [
+          "Oak",
+          "Wood"
+        ],
+        "sizes": [
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 54,
+      "title": "The Abstract Wall decor",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 38964,
+      "oldPrice": 47102,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_E1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_E.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_E3.jpg"
+      ],
+      "category": "Wall Decor",
+      "subcategory": [
+        "Wall Decor",
+        "Home Decor"
+      ],
+      "brand": "Design Within Reach",
+      "attributes": {
+        "color": "Black",
+        "roomType": "Home Decor"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Design Within Reach",
+          "Room & Board"
+        ],
+        "colors": [
+          "Black",
+          "Gold"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 55,
+      "title": "Sculpted Wave Wall decor",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 40217,
+      "oldPrice": 48936,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_F1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_F2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_F3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_F.jpg"
+      ],
+      "category": "Wall Decor",
+      "subcategory": [
+        "Wall Decor",
+        "Home Decor"
+      ],
+      "brand": "West Elm",
+      "attributes": {
+        "color": "Blue",
+        "roomType": "Home Decor"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "West Elm",
+          "Crate & Barrel"
+        ],
+        "colors": [
+          "Blue",
+          "Teal"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 56,
+      "title": "Linear Wall decor",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 42880,
+      "oldPrice": 50941,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_G.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_G1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_G2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_G3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_G4.jpg"
+      ],
+      "category": "Wall Decor",
+      "subcategory": [
+        "Wall Decor",
+        "Home Decor"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Brass",
+        "roomType": "Home Decor"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Article"
+        ],
+        "colors": [
+          "Brass",
+          "Gold"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 57,
+      "title": "Vertiledge Wall decor",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 45136,
+      "oldPrice": 53784,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_H1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_H2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_H3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_H.jpg"
+      ],
+      "category": "Wall Decor",
+      "subcategory": [
+        "Wall Decor",
+        "Home Decor"
+      ],
+      "brand": "Pottery Barn",
+      "attributes": {
+        "color": "Walnut",
+        "roomType": "Home Decor"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Pottery Barn",
+          "West Elm"
+        ],
+        "colors": [
+          "Walnut",
+          "Brown"
+        ],
+        "sizes": [
+          "L",
+          "XL"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 58,
+      "title": "Monorise Wall decor",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 46902,
+      "oldPrice": 55611,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_I.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_I1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_I2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_I3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_I4.jpg"
+      ],
+      "category": "Wall Decor",
+      "subcategory": [
+        "Wall Decor",
+        "Home Decor"
+      ],
+      "brand": "Article",
+      "attributes": {
+        "color": "Stone",
+        "roomType": "Home Decor"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Article",
+          "Anthropologie"
+        ],
+        "colors": [
+          "Stone",
+          "Gray"
+        ],
+        "sizes": [
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": false
+      },
+      "tags": []
+    },
+    {
+      "id": 59,
+      "title": "Infinite Curve Wall decor",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_J.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_J1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_J2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_J3.jpg"
+      ],
+      "category": "Wall Decor",
+      "subcategory": [
+        "Wall Decor",
+        "Home Decor"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Copper",
+        "roomType": "Home Decor"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Copper",
+          "Bronze"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    },
+    {
+      "id": 60,
+      "title": "Infinite Curve King Bed",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_A.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_A1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_A2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_A3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_A4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_A5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_A6.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_A7.jpg"
+      ],
+      "category": "Beds",
+      "subcategory": [
+        "King Bed",
+        "Bedroom"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Copper",
+        "roomType": "Bedroom",
+        "bedSize": "King"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Copper",
+          "Bronze"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "bedSizes": [
+          "King"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "luxury-beds"
+      ]
+    },
+    {
+      "id": 61,
+      "title": "Infinite Curve King Bed",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_B.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_B1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_B2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_B3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_B4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_B5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_B6.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_B7.jpg"
+      ],
+      "category": "Beds",
+      "subcategory": [
+        "King Bed",
+        "Bedroom"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Copper",
+        "roomType": "Bedroom",
+        "bedSize": "King"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Copper",
+          "Bronze"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "bedSizes": [
+          "King"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "luxury-beds"
+      ]
+    },
+    {
+      "id": 62,
+      "title": "Infinite Curve Queen Bed",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_C.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_C1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_C2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_C3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_C4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_C5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_C6.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_C7.jpg"
+      ],
+      "category": "Beds",
+      "subcategory": [
+        "Queen Bed",
+        "Bedroom"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Copper",
+        "roomType": "Bedroom",
+        "bedSize": "Queen"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Copper",
+          "Bronze"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "bedSizes": [
+          "Queen"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "trending",
+        "luxury-beds"
+      ]
+    },
+    {
+      "id": 63,
+      "title": "Infinite Curve Queen Bed",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_D.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_D1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_D2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_D3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_D4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_D5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_D6.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_D7.jpg"
+      ],
+      "category": "Beds",
+      "subcategory": [
+        "Queen Bed",
+        "Bedroom"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Copper",
+        "roomType": "Bedroom",
+        "bedSize": "Queen"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Copper",
+          "Bronze"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "bedSizes": [
+          "Queen"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "luxury-beds"
+      ]
+    },
+    {
+      "id": 64,
+      "title": "Infinite Curve Double Bed",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_E.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_E3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_E4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_E5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_E6.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_E7.jpg"
+      ],
+      "category": "Beds",
+      "subcategory": [
+        "Double Bed",
+        "Bedroom"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Copper",
+        "roomType": "Bedroom",
+        "bedSize": "Double"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Copper",
+          "Bronze"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "bedSizes": [
+          "Double"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "luxury-beds"
+      ]
+    },
+    {
+      "id": 65,
+      "title": "Infinite Curve Double Bed",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_F.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_F1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_F2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_F3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_F4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_F5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_F6.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_F7.jpg"
+      ],
+      "category": "Beds",
+      "subcategory": [
+        "Double Bed",
+        "Bedroom"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Copper",
+        "roomType": "Bedroom",
+        "bedSize": "Double"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Copper",
+          "Bronze"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "bedSizes": [
+          "Double"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "luxury-beds"
+      ]
+    },
+    {
+      "id": 66,
+      "title": "Infinite Curve Single Bed",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_G.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_G1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_G2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_G3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_G4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_G5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_G6.jpg"
+      ],
+      "category": "Beds",
+      "subcategory": [
+        "Single Bed",
+        "Bedroom"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Copper",
+        "roomType": "Bedroom",
+        "bedSize": "Single"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Copper",
+          "Bronze"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "bedSizes": [
+          "Single"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "luxury-beds"
+      ]
+    },
+    {
+      "id": 67,
+      "title": "Infinite Curve Single Bed",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_H.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_H1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_H2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_H3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_H4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_H5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_H6.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_H7.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_H7-1.jpg"
+      ],
+      "category": "Beds",
+      "subcategory": [
+        "Single Bed",
+        "Bedroom"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Copper",
+        "roomType": "Bedroom",
+        "bedSize": "Single"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Copper",
+          "Bronze"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "bedSizes": [
+          "Single"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "luxury-beds"
+      ]
+    },
+    {
+      "id": 68,
+      "title": "Infinite Curve Single Bed",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_I.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_I1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_I2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_I3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_I4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_I5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_I6.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_I7.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_I7-1.jpg"
+      ],
+      "category": "Beds",
+      "subcategory": [
+        "Single Bed",
+        "Bedroom"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Copper",
+        "roomType": "Bedroom",
+        "bedSize": "Single"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Copper",
+          "Bronze"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "bedSizes": [
+          "Single"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "luxury-beds"
+      ]
+    },
+    {
+      "id": 69,
+      "title": "Infinite Curve Single Bed",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 48357,
+      "oldPrice": 56904,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_J.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_J1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_J2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_J3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_J4.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_J5.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_J6.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_J7.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/bed_J7-1.jpg"
+      ],
+      "category": "Beds",
+      "subcategory": [
+        "Single Bed",
+        "Bedroom"
+      ],
+      "brand": "CB2",
+      "attributes": {
+        "color": "Copper",
+        "roomType": "Bedroom",
+        "bedSize": "Single"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "CB2",
+          "Design Within Reach"
+        ],
+        "colors": [
+          "Copper",
+          "Bronze"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "bedSizes": [
+          "Single"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": [
+        "luxury-beds"
+      ]
+    },
+    {
+      "id": 70,
+      "title": "The Serenity Wall decor",
+      "description": "A sculptural wall decor piece designed to add depth and visual interest to interiors.",
+      "price": 31742,
+      "oldPrice": 38914,
+      "stock": 100,
+      "images": [
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_A1.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_A2.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_A3.jpg",
+        "https://rantechnology.in/curve-&-comfort/final-products/wallSelf_A.jpg"
+      ],
+      "category": "Wall Decor",
+      "subcategory": [
+        "Wall Decor",
+        "Home Decor"
+      ],
+      "brand": "Anthropologie",
+      "attributes": {
+        "color": "White",
+        "roomType": "Home Decor"
+      },
+      "rating": 4.5,
+      "reviewsCount": 0,
+      "filters": {
+        "brands": [
+          "Anthropologie",
+          "Urban Outfitters"
+        ],
+        "colors": [
+          "White",
+          "Ceramic"
+        ],
+        "sizes": [
+          "S",
+          "M"
+        ],
+        "isOnSale": true,
+        "isFeatured": true
+      },
+      "tags": []
+    }
+  ]
+}

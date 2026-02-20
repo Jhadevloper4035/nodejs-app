@@ -1,0 +1,3 @@
+/* If your theme already animates the panel, you can skip this file. */
+.tf-add-cart-success { display: none; }
+.tf-add-cart-success.show { display: block; }

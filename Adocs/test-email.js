@@ -10,23 +10,11 @@ const config = {
   from: process.env.MAIL_FROM || process.env.SMTP_FROM,
 };
 
-console.log('\n📧 Testing Email Configuration...\n');
-console.log('Configuration:');
-console.log(`  Host: ${config.host}`);
-console.log(`  Port: ${config.port}`);
-console.log(`  User: ${config.user}`);
-console.log(`  Pass: ${config.pass ? '***' + config.pass.slice(-4) : 'NOT SET'}`);
-console.log(`  From: ${config.from}`);
-console.log('');
+
 
 if (!config.host || !config.user || !config.pass) {
   console.error('❌ Missing SMTP configuration!');
-  console.log('\nRequired in .env:');
-  console.log('  SMTP_HOST=smtp.gmail.com');
-  console.log('  SMTP_PORT=587');
-  console.log('  SMTP_USER=your-email@gmail.com');
-  console.log('  SMTP_PASS=your-app-password');
-  console.log('  MAIL_FROM=noreply@yourdomain.com');
+
   process.exit(1);
 }
 

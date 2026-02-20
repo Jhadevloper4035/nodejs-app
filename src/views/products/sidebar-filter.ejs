@@ -1,0 +1,237 @@
+<div class="sidebar-filter canvas-filter left">
+    <div class="canvas-wrapper">
+        <div class="canvas-header d-flex d-xl-none">
+            <h5>Filters</h5>
+            <span class="icon-close close-filter"></span>
+        </div>
+        <div class="canvas-body">
+            
+            <!-- Product Categories (Checkbox Multi-Select) -->
+            <% if (filterOptions.categories && filterOptions.categories.length > 0) { %>
+            <div class="widget-facet facet-categories">
+                <h6 class="facet-title">Product Categories</h6>
+                <div class="box-fieldset-item">
+                    <% filterOptions.categories.forEach((category, index) => { %>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" 
+                               name="category" 
+                               class="tf-check category-checkbox" 
+                               id="category-<%= index %>" 
+                               value="<%= category.slug %>"
+                               <%= (typeof selectedCategories !== 'undefined' && Array.isArray(selectedCategories) && selectedCategories.includes(category.slug)) ? 'checked' : '' %>>
+                        <label for="category-<%= index %>"><%= category.name %></label>
+                    </fieldset>
+                    <% }); %>
+                </div>
+            </div>
+            <% } %>
+
+            <!-- Subcategories (Always Show All, Checkbox Multi-Select) -->
+            <% if (filterOptions.subcategories && filterOptions.subcategories.length > 0) { %>
+            <div class="widget-facet facet-subcategories">
+                <h6 class="facet-title">Subcategories</h6>
+                <div class="box-fieldset-item">
+                    <% filterOptions.subcategories.forEach((subcategory, index) => { %>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" 
+                               name="subcategory" 
+                               class="tf-check subcategory-checkbox" 
+                               id="subcategory-<%= index %>" 
+                               value="<%= subcategory.slug %>"
+                               data-category="<%= subcategory.category ? subcategory.category.slug : '' %>"
+                               <%= (typeof selectedSubcategories !== 'undefined' && Array.isArray(selectedSubcategories) && selectedSubcategories.includes(subcategory.slug)) ? 'checked' : '' %>>
+                        <label for="subcategory-<%= index %>">
+                            <%= subcategory.name %>
+                            <% if (subcategory.category) { %>
+                            <span class="subcategory-parent">(in <%= subcategory.category.name %>)</span>
+                            <% } %>
+                        </label>
+                    </fieldset>
+                    <% }); %>
+                </div>
+            </div>
+            <% } %>
+
+            <!-- Price Range -->
+            <% if (filterOptions.priceRanges && filterOptions.priceRanges.length > 0) { %>
+            <div class="widget-facet facet-price">
+                <h6 class="facet-title">Price</h6>
+                
+                <!-- Price Slider -->
+                <div class="price-filter-wrapper">
+                    <div class="price-slider-container">
+                        <input type="range" 
+                               id="price-min-slider" 
+                               class="price-range-input" 
+                               min="0" 
+                               max="150000" 
+                               value="<%= typeof minPrice !== 'undefined' ? minPrice : 0 %>" 
+                               step="1000">
+                        <input type="range" 
+                               id="price-max-slider" 
+                               class="price-range-input" 
+                               min="0" 
+                               max="150000" 
+                               value="<%= typeof maxPrice !== 'undefined' ? maxPrice : 150000 %>" 
+                               step="1000">
+                        <div class="price-slider-track"></div>
+                    </div>
+                    
+                    <!-- Price Inputs -->
+                    <div class="price-inputs-wrapper">
+                        <div class="price-input-box">
+                            <label class="price-label">Min price</label>
+                            <div class="price-input-container">
+                                <input type="number" 
+                                       id="price-min-input" 
+                                       class="price-input" 
+                                       value="<%= typeof minPrice !== 'undefined' ? minPrice : 0 %>" 
+                                       min="0" 
+                                       max="150000">
+                                <span class="price-currency">₹</span>
+                            </div>
+                        </div>
+                        
+                        <div class="price-input-box">
+                            <label class="price-label">Max price</label>
+                            <div class="price-input-container">
+                                <input type="number" 
+                                       id="price-max-input" 
+                                       class="price-input" 
+                                       value="<%= typeof maxPrice !== 'undefined' ? maxPrice : 150000 %>" 
+                                       min="0" 
+                                       max="150000">
+                                <span class="price-currency">₹</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+
+            <!-- Seating Capacity -->
+            <% if (filterOptions.seatingCapacity && filterOptions.seatingCapacity.length > 0) { %>
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Seating Capacity</h6>
+                <div class="box-fieldset-item">
+                    <% filterOptions.seatingCapacity.forEach((capacity, index) => { %>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" 
+                               name="seatingCapacity" 
+                               class="tf-check" 
+                               id="capacity-<%= index %>" 
+                               value="<%= capacity %>"
+                               <%= (typeof selectedCapacities !== 'undefined' && Array.isArray(selectedCapacities) && selectedCapacities.includes(capacity.toString())) ? 'checked' : '' %>>
+                        <label for="capacity-<%= index %>"><%= capacity %></label>
+                    </fieldset>
+                    <% }); %>
+                </div>
+            </div>
+            <% } %>
+
+            <!-- Materials -->
+            <% if (filterOptions.materials && filterOptions.materials.length > 0) { %>
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Materials</h6>
+                <div class="box-fieldset-item">
+                    <% filterOptions.materials.forEach((material, index) => { %>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" 
+                               name="material" 
+                               class="tf-check" 
+                               id="material-<%= index %>" 
+                               value="<%= material %>"
+                               <%= (typeof selectedMaterials !== 'undefined' && Array.isArray(selectedMaterials) && selectedMaterials.includes(material)) ? 'checked' : '' %>>
+                        <label for="material-<%= index %>"><%= material %></label>
+                    </fieldset>
+                    <% }); %>
+                </div>
+            </div>
+            <% } %>
+
+            <!-- Styles -->
+            <% if (filterOptions.styles && filterOptions.styles.length > 0) { %>
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Styles</h6>
+                <div class="box-fieldset-item">
+                    <% filterOptions.styles.forEach((style, index) => { %>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" 
+                               name="style" 
+                               class="tf-check" 
+                               id="style-<%= index %>" 
+                               value="<%= style %>"
+                               <%= (typeof selectedStyles !== 'undefined' && Array.isArray(selectedStyles) && selectedStyles.includes(style)) ? 'checked' : '' %>>
+                        <label for="style-<%= index %>"><%= style %></label>
+                    </fieldset>
+                    <% }); %>
+                </div>
+            </div>
+            <% } %>
+
+            <!-- Room Types -->
+            <% if (filterOptions.roomTypes && filterOptions.roomTypes.length > 0) { %>
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Room Type</h6>
+                <div class="box-fieldset-item">
+                    <% filterOptions.roomTypes.forEach((room, index) => { %>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" 
+                               name="roomType" 
+                               class="tf-check" 
+                               id="room-<%= index %>" 
+                               value="<%= room %>"
+                               <%= (typeof selectedRoomTypes !== 'undefined' && Array.isArray(selectedRoomTypes) && selectedRoomTypes.includes(room)) ? 'checked' : '' %>>
+                        <label for="room-<%= index %>"><%= room %></label>
+                    </fieldset>
+                    <% }); %>
+                </div>
+            </div>
+            <% } %>
+
+            <!-- Availability -->
+            <% if (filterOptions.availability && filterOptions.availability.length > 0) { %>
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Availability</h6>
+                <div class="box-fieldset-item">
+                    <% filterOptions.availability.forEach((status, index) => { %>
+                    <fieldset class="fieldset-item">
+                        <input type="radio" 
+                               name="availability" 
+                               class="tf-check" 
+                               id="availability-<%= index %>" 
+                               value="<%= status %>"
+                               <%= (typeof selectedAvailability !== 'undefined' && selectedAvailability === status) ? 'checked' : '' %>>
+                        <label for="availability-<%= index %>"><%= status %></label>
+                    </fieldset>
+                    <% }); %>
+                </div>
+            </div>
+            <% } %>
+
+            <!-- Colors -->
+            <% if (filterOptions.colors && filterOptions.colors.length > 0) { %>
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Colors</h6>
+                <div class="box-fieldset-item">
+                    <% filterOptions.colors.forEach((color, index) => { %>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" 
+                               name="color" 
+                               class="tf-check" 
+                               id="color-<%= index %>" 
+                               value="<%= color %>"
+                               <%= (typeof selectedColors !== 'undefined' && Array.isArray(selectedColors) && selectedColors.includes(color)) ? 'checked' : '' %>>
+                        <label for="color-<%= index %>"><%= color %></label>
+                    </fieldset>
+                    <% }); %>
+                </div>
+            </div>
+            <% } %>
+
+        </div>
+        <div class="canvas-bottom d-block d-xl-none">
+            <button id="reset-filter" class="tf-btn btn-reset">Reset Filters</button>
+        </div>
+    </div>
+</div>
