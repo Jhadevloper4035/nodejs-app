@@ -19,15 +19,15 @@ const start = async () => {
       try {
         const mongoose = require("mongoose");
         await mongoose.connection.close();
-      } catch {}
+      } catch { }
       try {
         const { getRedis } = require("./config/redis");
         await getRedis().quit();
-      } catch {}
+      } catch { }
       try {
         const { getRabbit } = require("./config/rabbit");
         await getRabbit().conn.close();
-      } catch {}
+      } catch { }
       process.exit(0);
     });
   };

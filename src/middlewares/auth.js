@@ -11,6 +11,7 @@ const { setAuthCookies, clearAuthCookies } = require("../utils/cookies");
 const { newJti } = require("../utils/crypto");
 const User = require("../models/User");
 const { NODE_ENV } = require("../config/env");
+const Cart = require("../models/cart");
 
 const log = (...args) => {
   if (NODE_ENV !== "production") console.log(...args);
@@ -57,7 +58,7 @@ const verifyOrRefreshAccess = async (req, res) => {
     }
   }
 
-  
+
   if (!refreshToken) return null;
 
   try {
@@ -125,6 +126,41 @@ const attachUserIfAny = async (req, res, next) => {
 
 
 
+const attchCartCount = async (req, res, next) => {
+  try {
+    // If user not logged in
+    if (!req.user || !req.user.id) {
+      res.locals.cartCount = 0;
+      return next();
+    }
+
+    const userId = req.user.id;
+
+    let cart = await Cart.findOne({ userId });
+
+    // Create cart if not exists
+    if (!cart) {
+      cart = await Cart.create({ userId, items: [] });
+    }
+
+    // Calculate total items (sum of quantities)
+    const totalItems = cart.items.reduce(
+      (sum, item) => sum + (item.quantity || 0),
+      0
+    );
+
+    res.locals.cartCount = totalItems;
+
+    next();
+  } catch (err) {
+    console.error("Cart count middleware error:", err);
+    res.locals.cartCount = 0;
+    next(); // continue even if error
+  }
+};
+
+
+
 /**
  * ------------------------------------------------------------------
  * PAGES (PROTECTED)
@@ -171,4 +207,5 @@ module.exports = {
   requireAuth,
   requireVerified,
   requireApiAuth,
+  attchCartCount
 };

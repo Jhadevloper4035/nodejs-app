@@ -61,10 +61,55 @@ const otpLimiter = rateLimit({
   },
 });
 
+
+
+// Checkout initiation: 5 attempts per 15 min per IP
+const checkoutLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 5,
+  skipSuccessfulRequests: false,
+  keyGenerator: (req) => req.user?.id || req.ip, // per-user when logged in
+  message: { error: 'Too many checkout attempts. Please wait 15 minutes.' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+
+// Payment verification: 10 attempts per 5 min per IP
+const verifyLimiter = rateLimit({
+  windowMs: 5 * 60 * 1000,
+  max: 10,
+  keyGenerator: (req) => req.user?.id || req.ip,
+  message: { error: 'Too many verification attempts.' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+
+
+// Order detail: 30 req per minute (view page)
+const orderDetailLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 30,
+  keyGenerator: (req) => req.user?.id || req.ip,
+  message: 'Too many requests.',
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+
+
+
+
+
+
 module.exports = {
   limiter,
   authLimiter,
   registerLimiter,
   passwordResetLimiter,
   otpLimiter,
+  checkoutLimiter,
+  verifyLimiter,
+  orderDetailLimiter
 };

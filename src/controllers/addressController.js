@@ -24,6 +24,7 @@ const pickAllowedFields = (body) => {
     return out;
 };
 
+
 const getAllAddresses = async (req, res) => {
     try {
         const userId = req.user.id;

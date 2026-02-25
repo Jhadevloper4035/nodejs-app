@@ -2,15 +2,20 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const expressLayouts = require("express-ejs-layouts");
+
+const config = require("./config/env")
+
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 const { NODE_ENV, IS_PROD, CORS_ORIGIN } = require("./config/env");
 
 // Middlewares
 const { requestId, helmetConfig } = require("./middlewares/security");
 const { errorHandler } = require("./middlewares/errorHandler");
-const { attachUserIfAny } = require("./middlewares/auth");
+const { attachUserIfAny, attchCartCount } = require("./middlewares/auth");
 
 // Routes
 const authRoutes = require("./routes/authRoutes");
@@ -19,12 +24,17 @@ const addressRoutes = require("./routes/addressRoute");
 const categoryRoutes = require("./routes/categoryRoute");
 const productRoutes = require("./routes/productRoute");
 const cartRoutes = require("./routes/cartRoute")
+const orderRoutes = require('./routes/orderRoute');
+
+
 
 const { connectRedis } = require("./config/redis");
 const { categoryMiddleware } = require("./middlewares/categoryMiddleware");
 
 const createApp = () => {
   const app = express();
+
+
 
   if (IS_PROD) app.set("trust proxy", 1);
 
@@ -44,9 +54,30 @@ const createApp = () => {
   );
 
   // Parsers
-  app.use(express.urlencoded({ extended: false, limit: "10mb" }));
-  app.use(express.json({ limit: "10mb" }));
+  app.use(express.json({ limit: '50kb' }));
+  app.use(express.urlencoded({ extended: false, limit: '50kb' }));
   app.use(cookieParser());
+
+
+  app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({
+      mongoUrl: config.MONGO_URI,
+      ttl: 30 * 60,   // 30 min
+      autoRemove: 'native',
+    }),
+    cookie: {
+      httpOnly: true,                                    // JS cannot read cookie
+      secure: process.env.NODE_ENV === 'production',  // HTTPS only in prod
+      sameSite: 'strict',                               // blocks CSRF
+      maxAge: 30 * 60 * 1000,                         // 30 min
+    },
+    name: '__Host-sid', // __Host- prefix prevents subdomain cookie injection (HTTPS only)
+  }));
+
+
 
   // Logs
   // if (NODE_ENV !== "test") app.use(morgan("dev")); 
@@ -65,6 +96,8 @@ const createApp = () => {
 
   // Attch category adn subcategory
   app.use(categoryMiddleware);
+
+  app.use(attchCartCount)
 
   // Default view locals
   app.use((req, res, next) => {
@@ -87,6 +120,8 @@ const createApp = () => {
 
 
   // API Routes
+  app.use('/checkout', orderRoutes);
+  app.use('/orders', orderRoutes);
   app.use("/api/user/address", addressRoutes);
   app.use("/api/categories", categoryRoutes);
   app.use("/api/products", productRoutes);

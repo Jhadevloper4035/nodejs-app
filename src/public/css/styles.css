@@ -21183,6 +21183,18 @@ ul.list-text.type-number {
 }
 
 
-#footer .text-caption-1{
+#footer .text-caption-1 {
     color: #fff !important;
 }
+
+.collection-position-2.style-7 .content {
+    bottom: 32px !important;
+    top: unset !important;
+}
+
+.header-default .main-header .wrapper-header {
+    min-height: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
