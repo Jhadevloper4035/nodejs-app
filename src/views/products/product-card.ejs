@@ -55,9 +55,9 @@
 
       <div class="list-btn-main">
         <% if (product.inStock) { %>
-          <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product"
+          <a href="/products/<%= product.slug %>"  class="btn-main-product"
              data-product-id="<%= product._id %>">
-            Add To cart
+            View Product
           </a>
         <% } else { %>
           <button class="btn-main-product" disabled>Out of Stock</button>
